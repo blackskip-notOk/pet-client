@@ -1,1 +1,0 @@
-import{j as s,N as e,p as r,O as t}from"./index-bd917870.js";const x=()=>s.jsxs(s.Fragment,{children:[s.jsx("h2",{children:"Examples"}),s.jsx(e,{to:r.root,children:"Home Page"}),s.jsx("article",{children:s.jsx(t,{})})]});export{x as Examples};

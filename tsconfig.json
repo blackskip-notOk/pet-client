@@ -1,86 +1,119 @@
 {
-	"extends": "./tsconfig.paths.json",
-	"include": [
-		"src",
-		"./vite.config.ts",
-		"configs/vite/proxy.ts",
-		"src/app/i18n/locales/en/common.json",
-		"src/app/i18n/locales/en/glossary.json",
-		"src/app/i18n/locales/en/validation.json",
-		"src/app/i18n/locales/ru/common.json",
-		"src/app/i18n/locales/ru/glossary.json",
-		"src/app/i18n/locales/ru/validation.json"
-	],
-	"compilerOptions": {
-		"baseUrl": "./",
-		"importsNotUsedAsValues": "remove",
-		"preserveConstEnums": true,
-		"stripInternal": true,
-		"lib": [
-			"DOM",
-			"DOM.Iterable",
-			"ESNext"
-		],
-		"useDefineForClassFields": true,
-		"extendedDiagnostics": true,
-		"preserveWatchOutput": false,
-		"types": [
-			"vite/client",
-		],
-		"allowUnreachableCode": false,
-		"allowUnusedLabels": false,
-		"alwaysStrict": true,
-		"exactOptionalPropertyTypes": true,
-		"noFallthroughCasesInSwitch": true,
-		"noImplicitAny": true,
-		"noImplicitOverride": true,
-		"noImplicitReturns": true,
-		"noImplicitThis": true,
-		"noPropertyAccessFromIndexSignature": true,
-		"noUncheckedIndexedAccess": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"strict": true,
-		"strictBindCallApply": true,
-		"strictFunctionTypes": true,
-		"strictNullChecks": true,
-		"strictPropertyInitialization": true,
-		"useUnknownInCatchVariables": true,
-		"allowArbitraryExtensions": true,
-		"allowImportingTsExtensions": true,
-		"allowUmdGlobalAccess": false,
-		"module": "ESNext",
-		"moduleResolution": "Bundler",
-		"noResolve": false,
-		"resolveJsonModule": true,
-		"downlevelIteration": false,
-		"newLine": "lf",
-		"noEmit": true,
-		"removeComments": true,
-		"sourceMap": true,
-		"allowJs": false,
-		"disableSizeLimit": true,
-		"plugins": [
-			{
-				"name": "typescript-eslint-language-service"
-			},
-			{
-				"name": "typescript-plugin-css-modules"
-			}
-		],
-		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"isolatedModules": true,
-		"verbatimModuleSyntax": true,
-		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true,
-		"target": "ESNext",
-		"noErrorTruncation": true,
-		"skipLibCheck": true,
-		"assumeChangesOnlyAffectDirectDependencies": true,
-		"jsx": "react-jsx",
-		"jsxImportSource": "react",
-		"pretty": true
-	}
+  "compilerOptions": {
+    "exactOptionalPropertyTypes": false,
+    "baseUrl": "./",
+    "importsNotUsedAsValues": "remove",
+    "preserveConstEnums": true,
+    "stripInternal": true,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext",
+      "Decorators",
+      "ESNext.Decorators",
+      "WebWorker",
+      "WebWorker.ImportScripts",
+      "Webworker.Iterable"
+    ],
+    "useDefineForClassFields": true,
+    "extendedDiagnostics": true,
+    "preserveWatchOutput": false,
+    "types": [
+      "vite/client",
+    ],
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+    "allowUmdGlobalAccess": false,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "allowArbitraryExtensions": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "noResolve": false,
+    "resolveJsonModule": true,
+    "downlevelIteration": false,
+    "newLine": "lf",
+    "removeComments": true,
+    "sourceMap": true,
+    "allowJs": false,
+    "disableSizeLimit": true,
+    "plugins": [
+      {
+        "name": "typescript-eslint-language-service"
+      },
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "ESNext",
+    "noErrorTruncation": true,
+    "skipLibCheck": true,
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "pretty": true,
+    "paths": {
+      "~i18n": [
+        "./src/app/i18n/index.ts"
+      ],
+      "~queryClient": [
+        "./src/app/queryClient/index.ts"
+      ],
+      "~router": [
+        "./src/app/router/index.ts"
+      ],
+      "~pages/*": [
+        "./src/pages/*"
+      ],
+      "~shared/*": [
+        "./src/shared/*"
+      ],
+      "~entities/*": [
+        "./src/entities/*"
+      ],
+      "~features/*": [
+        "./src/features/*"
+      ],
+      "~app/*": [
+        "./src/app/*"
+      ],
+      "~icons": [
+        "./public/icons"
+      ],
+    }
+  },
+  "include": [
+    "src",
+    "./vite.config.ts",
+    "configs/vite/proxy.ts",
+    "src/app/i18n/locales/en/common.json",
+    "src/app/i18n/locales/en/glossary.json",
+    "src/app/i18n/locales/en/validation.json",
+    "src/app/i18n/locales/ru/common.json",
+    "src/app/i18n/locales/ru/glossary.json",
+    "src/app/i18n/locales/ru/validation.json"
+  ],
 }

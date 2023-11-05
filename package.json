@@ -13,16 +13,16 @@
 		"type": "git",
 		"url": "git+https://github.com/blackskip-notOk/client-server.git"
 	},
+	"type": "module"
+	,
 	"private": true,
-	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"lint": "eslint --max-warnings=0 --color src/",
 		"lint:fix": "eslint --max-warnings=0 --fix --color src/",
 		"format": "prettier --write --ignore-unknown src/",
-		"stylelint": "npx stylelint **/*.{css,scss,sass} --color",
-		"prepare": "husky install"
+		"stylelint": "npx stylelint **/*.{css,scss,sass} --color"
 	},
 	"dependencies": {
 		"@hookform/error-message": "^2.0.1",
