@@ -9,7 +9,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { setProxyConfig } from './configs/vite/proxy'
 
 export default defineConfig(({ mode }) => {
-	const env = loadEnv(mode, '../../env', 'CLIENT_')
+	const env = loadEnv(mode, './configs/env/.env.development', 'CLIENT_')
 	Object.assign(process.env, env)
 
 	if (mode === 'development') {
@@ -21,7 +21,6 @@ export default defineConfig(({ mode }) => {
 		build: {
 			chunkSizeWarningLimit: 300,
 			cssMinify: 'lightningcss',
-			outDir: 'dist',
 			reportCompressedSize: true,
 			sourcemap: false,
 		},
@@ -34,7 +33,7 @@ export default defineConfig(({ mode }) => {
 			},
 			transformer: 'lightningcss',
 		},
-		envDir: '../../env',
+		envDir: './configs/env',
 		envPrefix: 'CLIENT_',
 		logLevel: 'warn',
 		plugins: [
