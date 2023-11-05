@@ -9,14 +9,14 @@ export function setProxyConfig(mode: string) {
 	const proxyOptions = {
 		changeOrigin: true,
 		secure: false,
-		target: api_path,
+		target: api_path
 	}
 
 	const proxyConfig: Record<string, ProxyOptions> = {
 		'^/api/.*': proxyOptions,
 		'^/css/.*': proxyOptions,
 		'^/font/.*': proxyOptions,
-		'^/js/.*': proxyOptions,
+		'^/js/.*': proxyOptions
 	}
 
 	return proxyConfig

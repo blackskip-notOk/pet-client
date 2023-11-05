@@ -10,18 +10,18 @@ export const api = {
 	auth: {
 		auth: AUTH,
 		login: `${AUTH}/login`,
-		signup: `${AUTH}/signup`,
+		signup: `${AUTH}/signup`
 	},
 	todo: {
 		create: `${TODO}/${CREATE}`,
-		list: `${TODO}/${LIST}`,
+		list: `${TODO}/${LIST}`
 	},
-	users: USERS,
+	users: USERS
 } as const
 
 export const httpMethods = {
 	DELETE: 'DELETE',
 	GET: 'GET',
 	POST: 'POST',
-	PUT: 'PUT',
+	PUT: 'PUT'
 } as const

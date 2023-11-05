@@ -18,13 +18,13 @@ export const resources = {
 	en: {
 		common: commonEn,
 		glossary: glossaryEn,
-		validation: validationEn,
+		validation: validationEn
 	},
 	ru: {
 		common: commonRu,
 		glossary: glossaryRu,
-		validation: validationRu,
-	},
+		validation: validationRu
+	}
 } as const
 
 i18n.use(ChainedBackend)
@@ -36,28 +36,28 @@ i18n.use(ChainedBackend)
 			backendOptions: [
 				{
 					expirationTime: 7 * 24 * 60 * 60 * 1000,
-					prefix: 'i18n_res_',
+					prefix: 'i18n_res_'
 				},
 				{
-					loadPath: './locales/{{lng}}/{{ns}}.json',
-				},
+					loadPath: './locales/{{lng}}/{{ns}}.json'
+				}
 			],
-			backends: [LocalStorageBackend, HttpApi],
+			backends: [LocalStorageBackend, HttpApi]
 		},
 		debug: import.meta.env.DEV,
 		defaultNS,
 		fallbackLng: 'en',
 		interpolation: {
-			escapeValue: false,
+			escapeValue: false
 		},
 		ns: ['common', 'validation', 'glossary'],
 		preload: ['ru'],
 		react: {
 			bindI18n: 'languageChanged',
-			useSuspense: true,
+			useSuspense: true
 		},
 		resources,
-		supportedLngs: ['en', 'ru'],
+		supportedLngs: ['en', 'ru']
 	})
 
 i18n.on('initialized', options => {

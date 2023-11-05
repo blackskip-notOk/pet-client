@@ -7,7 +7,7 @@ import { USER_QUERY_KEY, getUserProfile } from './api'
 export const UserProfile: FC = () => {
 	const { error, isError, isPending } = useQuery({
 		queryFn: getUserProfile,
-		queryKey: [USER_QUERY_KEY],
+		queryKey: [USER_QUERY_KEY]
 	})
 
 	if (isPending) {

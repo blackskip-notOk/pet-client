@@ -7,7 +7,6 @@ import axios from 'axios'
 import type { SubmitHandler } from 'react-hook-form'
 import { useForm } from 'react-hook-form'
 
-
 import { Button } from '~shared/ui/button'
 import { Form } from '~shared/ui/form'
 import { FormErrorMessage } from '~shared/ui/formErrorMessage'
@@ -27,7 +26,7 @@ export const LoginForm = () => {
 			return axios.post('api/auth/login', data)
 		},
 		mutationKey: ['login'],
-		retry: 0,
+		retry: 0
 	})
 
 	useEffect(() => {
@@ -45,10 +44,10 @@ export const LoginForm = () => {
 	const {
 		formState: { errors, isDirty, isSubmitted },
 		handleSubmit,
-		register,
+		register
 	} = useForm<LoginFormType>({
 		defaultValues: { [LoginFormEnum.enum.login]: '', [LoginFormEnum.enum.password]: '' },
-		resolver: zodResolver(LoginFormSchema),
+		resolver: zodResolver(LoginFormSchema)
 	})
 
 	const onSubmit: SubmitHandler<LoginFormType> = data => {

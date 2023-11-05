@@ -23,22 +23,22 @@ export const routes: Array<RouteObject> = [
 		// ],
 		element: <HomePage />,
 		errorElement: <SuspenseComponent LazyComponent={LazyNotFound} />,
-		path: paths.root,
+		path: paths.root
 	},
 	{
 		element: <SuspenseComponent LazyComponent={LazyUsers} />,
-		path: paths.users,
+		path: paths.users
 	},
 	{
 		element: <SuspenseComponent LazyComponent={LazyTodo} />,
-		path: paths.todo,
+		path: paths.todo
 	},
 	{
 		children: [],
 		element: <LazyExamples />,
 		errorElement: <SuspenseComponent LazyComponent={LazyNotFound} />,
-		path: paths.examples,
-	},
+		path: paths.examples
+	}
 ]
 
 export const router = createBrowserRouter(routes)

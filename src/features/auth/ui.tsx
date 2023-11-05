@@ -9,7 +9,7 @@ export const Auth = () => {
 	const { data, error, isError, isPending, isSuccess } = useQuery({
 		queryFn: getAuth,
 		queryKey: [AUTH_QUERY_KEY],
-		retry: 0,
+		retry: 0
 	})
 
 	if (isPending) {

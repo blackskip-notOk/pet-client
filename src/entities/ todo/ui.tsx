@@ -7,7 +7,7 @@ import { TODO_QUERY_KEY, getTodoList } from './api'
 export const TodoList: FC = () => {
 	const { data, error, isError, isPending } = useQuery({
 		queryFn: getTodoList,
-		queryKey: [TODO_QUERY_KEY],
+		queryKey: [TODO_QUERY_KEY]
 	})
 
 	if (isPending) {

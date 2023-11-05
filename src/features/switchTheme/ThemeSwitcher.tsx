@@ -1,6 +1,5 @@
 import type { FC } from 'react'
 
-
 import { status } from './index.module.scss'
 
 export const ThemeSwitcher: FC = () => {

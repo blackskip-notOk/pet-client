@@ -7,7 +7,7 @@ import { USERS_QUERY_KEY, getUsers } from './api'
 export const UsersList: FC = () => {
 	const { data, error, isError, isPending } = useQuery({
 		queryFn: getUsers,
-		queryKey: [USERS_QUERY_KEY],
+		queryKey: [USERS_QUERY_KEY]
 	})
 
 	if (isPending) {

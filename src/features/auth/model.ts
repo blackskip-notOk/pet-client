@@ -4,7 +4,7 @@ import { UserProfileSchema } from '~entities/user'
 
 export const AuthResponseSchema = z.object({
 	access_token: z.string(),
-	user: UserProfileSchema,
+	user: UserProfileSchema
 })
 
-export type TAuthResponse = z.infer<typeof AuthResponseSchema>;
+export type TAuthResponse = z.infer<typeof AuthResponseSchema>

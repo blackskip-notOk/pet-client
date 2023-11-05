@@ -5,7 +5,7 @@ const ERROR = 2
 module.exports = {
 	root: true,
 	env: {
-		browser: true,
+		browser: true
 	},
 	extends: [
 		'eslint:recommended',
@@ -20,27 +20,27 @@ module.exports = {
 		'plugin:import/recommended',
 		'plugin:import/typescript',
 		'plugin:i18next/recommended',
-		'prettier',
+		'prettier'
 	],
 	overrides: [
 		{
 			files: ['**/__tests__/*.{t}s?(x)', '**/*.spec.{t}s?(x)'],
-			extends: ['plugin:playwright/recommended', 'plugin:testing-library/react'],
+			extends: ['plugin:playwright/recommended', 'plugin:testing-library/react']
 		},
 		{
 			files: ['*.json', '*.json5'],
-			parser: 'jsonc-eslint-parser',
-		},
+			parser: 'jsonc-eslint-parser'
+		}
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		tsconfigRootDir: __dirname,
 		project: ['./tsconfig.json'],
 		ecmaFeatures: {
-			jsx: true,
+			jsx: true
 		},
 		ecmaVersion: 2023,
-		sourceType: 'module',
+		sourceType: 'module'
 	},
 	plugins: [
 		'react',
@@ -50,15 +50,15 @@ module.exports = {
 		'perfectionist',
 		'jsx-a11y',
 		'import',
-		'i18next',
+		'i18next'
 	],
 	settings: {
 		react: {
-			version: 'detect',
+			version: 'detect'
 		},
 		'import/resolver': {
 			node: {
-				extensions: ['.ts', '.tsx', '.d.ts'],
+				extensions: ['.ts', '.tsx', '.d.ts']
 			},
 			typescript: { alwaysTryTypes: true },
 			alias: {
@@ -72,15 +72,15 @@ module.exports = {
 					['~entities', './src/entities'],
 					['~features', './src/features'],
 					['~app', './src/app'],
-					['~icons', './public/icons'],
-				],
-			},
+					['~icons', './public/icons']
+				]
+			}
 		},
 		'import/parsers': {
-			'@typescript-eslint/parser': [ERROR, ['.ts', '.tsx', '.d.ts']],
-		},
+			'@typescript-eslint/parser': [ERROR, ['.ts', '.tsx', '.d.ts']]
+		}
 	},
-	ignorePatterns: ['.eslintrc.cjs'],
+	ignorePatterns: ['.eslintrc.cjs', './prettier.config.js'],
 	rules: {
 		'react-hooks/rules-of-hooks': ERROR,
 		'react-hooks/exhaustive-deps': WARN,
@@ -91,8 +91,8 @@ module.exports = {
 			{
 				shorthandFirst: true,
 				callbacksLast: true,
-				ignoreCase: true,
-			},
+				ignoreCase: true
+			}
 		],
 		'import/order': [
 			WARN,
@@ -102,16 +102,16 @@ module.exports = {
 					{
 						pattern: 'react',
 						group: 'external',
-						position: 'before',
-					},
+						position: 'before'
+					}
 				],
 				pathGroupsExcludedImportTypes: ['react'],
 				'newlines-between': 'always',
 				alphabetize: {
 					order: 'asc',
-					caseInsensitive: true,
-				},
-			},
+					caseInsensitive: true
+				}
+			}
 		],
 		'import/no-named-as-default-member': OFF,
 		'i18next/no-literal-string': WARN,
@@ -121,12 +121,12 @@ module.exports = {
 			ERROR,
 			{
 				type: 'natural',
-				order: 'asc',
-			},
+				order: 'asc'
+			}
 		],
 		'testing-library/await-async-queries': ERROR,
 		'testing-library/no-await-sync-queries': ERROR,
 		'testing-library/no-debugging-utils': WARN,
-		'testing-library/no-dom-import': OFF,
-	},
+		'testing-library/no-dom-import': OFF
+	}
 }

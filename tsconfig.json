@@ -3,7 +3,13 @@
 	"include": [
 		"src",
 		"./vite.config.ts",
-		"configs/vite/proxy.ts"
+		"configs/vite/proxy.ts",
+		"src/app/i18n/locales/en/common.json",
+		"src/app/i18n/locales/en/glossary.json",
+		"src/app/i18n/locales/en/validation.json",
+		"src/app/i18n/locales/ru/common.json",
+		"src/app/i18n/locales/ru/glossary.json",
+		"src/app/i18n/locales/ru/validation.json"
 	],
 	"compilerOptions": {
 		"baseUrl": "./",

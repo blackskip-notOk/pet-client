@@ -9,22 +9,22 @@ type navLinksType = Array<{
 export const navLinks: navLinksType = [
 	{
 		title: i18n.t('navLinks.login', { ns: 'common' }),
-		to: paths.login,
+		to: paths.login
 	},
 	{
 		title: i18n.t('navLinks.signup', { ns: 'common' }),
-		to: paths.signup,
+		to: paths.signup
 	},
 	{
 		title: i18n.t('navLinks.users', { ns: 'common' }),
-		to: paths.users,
+		to: paths.users
 	},
 	{
 		title: i18n.t('navLinks.todo', { ns: 'common' }),
-		to: paths.todo,
+		to: paths.todo
 	},
 	{
 		title: i18n.t('navLinks.examples', { ns: 'common' }),
-		to: paths.examples,
-	},
+		to: paths.examples
+	}
 ]

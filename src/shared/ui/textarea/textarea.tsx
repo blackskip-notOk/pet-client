@@ -8,5 +8,5 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextareaHTMLAttributes<H
 				{...props}
 			/>
 		)
-	},
+	}
 )

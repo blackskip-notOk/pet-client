@@ -9,7 +9,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { setProxyConfig } from './configs/vite/proxy'
 
 export default defineConfig(({ mode }) => {
-	const env = loadEnv(mode, './configs/env/.env.development', 'CLIENT_')
+	const env = loadEnv(mode, './configs/env', 'CLIENT_')
 	Object.assign(process.env, env)
 
 	if (mode === 'development') {
@@ -22,16 +22,16 @@ export default defineConfig(({ mode }) => {
 			chunkSizeWarningLimit: 300,
 			cssMinify: 'lightningcss',
 			reportCompressedSize: true,
-			sourcemap: false,
+			sourcemap: false
 		},
 		css: {
 			devSourcemap: true,
 			lightningcss: {
 				cssModules: {
-					pattern: 'client-[name]-[hash]-[local]',
-				},
+					pattern: 'client-[name]-[hash]-[local]'
+				}
 			},
-			transformer: 'lightningcss',
+			transformer: 'lightningcss'
 		},
 		envDir: './configs/env',
 		envPrefix: 'CLIENT_',
@@ -41,60 +41,60 @@ export default defineConfig(({ mode }) => {
 			i18nextLoader({
 				include: ['**/*.json'],
 				logLevel: 'error',
-				paths: ['./public/locales'],
+				paths: ['./public/locales']
 			}),
 			typedGenCssModulesPlugin({
-				cssExt: 'scss',
+				cssExt: 'scss'
 			}),
-			VitePWA(),
+			VitePWA()
 		],
 		preview: {
 			open: true,
 			port: 4173,
-			strictPort: true,
+			strictPort: true
 		},
 		resolve: {
 			alias: [
 				{
 					find: '~i18n',
-					replacement: path.resolve(__dirname, './src/app/i18n'),
+					replacement: path.resolve(__dirname, './src/app/i18n')
 				},
 				{
 					find: '~queryClient',
-					replacement: path.resolve(__dirname, './src/app/queryClient'),
+					replacement: path.resolve(__dirname, './src/app/queryClient')
 				},
 				{
 					find: '~router',
-					replacement: path.resolve(__dirname, './src/app/router'),
+					replacement: path.resolve(__dirname, './src/app/router')
 				},
 				{
 					find: '~pages',
-					replacement: path.resolve(__dirname, './src/pages'),
+					replacement: path.resolve(__dirname, './src/pages')
 				},
 				{
 					find: '~shared',
-					replacement: path.resolve(__dirname, './src/shared'),
+					replacement: path.resolve(__dirname, './src/shared')
 				},
 				{
 					find: '~entities',
-					replacement: path.resolve(__dirname, './src/entities'),
+					replacement: path.resolve(__dirname, './src/entities')
 				},
 				{
 					find: '~features',
-					replacement: path.resolve(__dirname, './src/features'),
+					replacement: path.resolve(__dirname, './src/features')
 				},
 				{
 					find: '~icons',
-					replacement: path.resolve(__dirname, './public/icons'),
-				},
-			],
+					replacement: path.resolve(__dirname, './public/icons')
+				}
+			]
 		},
 		server: {
 			host: env['CLIENT_HOST'] ?? '0.0.0.0',
 			open: true,
 			port: Number(env['CLIENT_PORT']),
 			proxy: setProxyConfig(mode),
-			strictPort: true,
-		},
+			strictPort: true
+		}
 	}
 })

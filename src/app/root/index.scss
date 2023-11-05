@@ -2,56 +2,56 @@
 @import './styles/vars';
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  font-family: Decovar, sans-serif;
-  font-variation-settings: 'TRMA' 1000;
+	font-family: Decovar, sans-serif;
+	font-variation-settings: 'TRMA' 1000;
 }
 
 @supports (font-variation-settings: normal) {
-  @font-face {
-    font-family: Decovar;
-    font-variation-settings:
-      'BLDA' 0,
-      'TRMD' 0,
-      'TRMC' 0,
-      'SKLD' 0,
-      'TRML' 0,
-      'SKLA' 0,
-      'TRMF' 0,
-      'TRMK' 0,
-      'BLDB' 0,
-      'WMX2' 0,
-      'TRMB' 0,
-      'TRMA' 1000,
-      'SKLB' 0,
-      'TRMG' 0,
-      'TRME' 0;
-    font-weight: 100 1000;
-    font-display: swap;
-    font-stretch: 25% 151%;
-    src: url('../fonts/DecovarAlpha-VF.ttf') format('truetype-variations');
-  }
+	@font-face {
+		font-family: Decovar;
+		font-variation-settings:
+			'BLDA' 0,
+			'TRMD' 0,
+			'TRMC' 0,
+			'SKLD' 0,
+			'TRML' 0,
+			'SKLA' 0,
+			'TRMF' 0,
+			'TRMK' 0,
+			'BLDB' 0,
+			'WMX2' 0,
+			'TRMB' 0,
+			'TRMA' 1000,
+			'SKLB' 0,
+			'TRMG' 0,
+			'TRME' 0;
+		font-weight: 100 1000;
+		font-display: swap;
+		font-stretch: 25% 151%;
+		src: url('../fonts/DecovarAlpha-VF.ttf') format('truetype-variations');
+	}
 
-  @font-face {
-    font-family: MartianMonoVF;
-    font-weight: 100 800;
-    font-display: swap;
-    font-stretch: 75% 112.5%;
-    src: url('../fonts/MartianMonoVF.woff2') format('woff2-variations');
-  }
+	@font-face {
+		font-family: MartianMonoVF;
+		font-weight: 100 800;
+		font-display: swap;
+		font-stretch: 75% 112.5%;
+		src: url('../fonts/MartianMonoVF.woff2') format('woff2-variations');
+	}
 }
 
 a {
-  position: relative;
+	position: relative;
 
-  display: inline-block;
+	display: inline-block;
 
-  height: fit-content;
+	height: fit-content;
 
-  font-family: MartianMonoVF, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
+	font-family: MartianMonoVF, sans-serif;
+	font-size: 14px;
+	text-decoration: none;
 }

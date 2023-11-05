@@ -28,7 +28,7 @@ export const SignupForm = () => {
 		AxiosError<TServerError>,
 		TSignupForm
 	>({
-		mutationFn: signup,
+		mutationFn: signup
 	})
 
 	useEffect(() => {
@@ -53,10 +53,10 @@ export const SignupForm = () => {
 	const {
 		formState: { errors, isDirty },
 		handleSubmit,
-		register,
+		register
 	} = useForm<TSignupForm>({
 		defaultValues: { login: '', password: '' },
-		resolver: zodResolver(SignupFormSchema),
+		resolver: zodResolver(SignupFormSchema)
 	})
 
 	const onSubmit: SubmitHandler<TSignupForm> = data => {

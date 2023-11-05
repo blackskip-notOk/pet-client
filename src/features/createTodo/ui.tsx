@@ -21,16 +21,16 @@ export const CreateTodoForm: FC = () => {
 	const { t } = useTranslation('common', { keyPrefix: 'createTodo' })
 
 	const { mutate } = useMutation<AxiosResponse<TCreateTodoResponse>, AxiosError, TCreateTodoForm>({
-		mutationFn: createTodo,
+		mutationFn: createTodo
 	})
 
 	const {
 		formState: { errors, isDirty },
 		handleSubmit,
-		register,
+		register
 	} = useForm<TCreateTodoForm>({
 		defaultValues: { content: '', name: '' },
-		resolver: zodResolver(CreateTodoFormSchema),
+		resolver: zodResolver(CreateTodoFormSchema)
 	})
 
 	const onSubmit: SubmitHandler<TCreateTodoForm> = data => {
