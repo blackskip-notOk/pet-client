@@ -1,0 +1,66 @@
+.navlink {
+    color: var(--text-alt);
+    text-transform: uppercase;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        bottom: -2px;
+        transform: scaleX(0);
+
+        width: 100%;
+
+        border-bottom: 2px solid var(--brand);
+
+        transition: transform 0.5s ease;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:focus-visible {
+        transform: scaleX(1);
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--brand);
+    }
+
+    &:focus-visible {
+        color: var(--outline-color);
+
+        border-radius: 4px;
+        outline-color: var(--outline-color);
+        outline-style: ridge;
+        outline-width: medium;
+        outline-offset: 4px;
+        &::before {
+            transform: scaleX(0);
+        }
+    }
+
+    @media screen and (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        &::before {
+            transition: none;
+        }
+    }
+}
+
+.active {
+    color: var(--brand);
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        bottom: -2px;
+        transform: scaleX(1);
+
+        width: 100%;
+
+        border-bottom: 2px solid var(--brand);
+    }
+}

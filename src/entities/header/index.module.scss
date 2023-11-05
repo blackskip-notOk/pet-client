@@ -1,0 +1,36 @@
+.header {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    column-gap: 16px;
+    align-items: center;
+
+    padding: 20px 10px;
+}
+
+.navlink {
+    &::before {
+        content: none;
+    }
+    &:focus-visible {
+        border-radius: 4px;
+        outline-color: var(--outline-color);
+        outline-style: ridge;
+        outline-width: medium;
+        outline-offset: 4px;
+    }
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+    &:hover,
+    &:focus {
+        filter: invert(100%);
+    }
+}
+
+.iconsContainer {
+    display: flex;
+    gap: 8px;
+    border: 1px solid red;
+}

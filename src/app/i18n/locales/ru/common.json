@@ -1,0 +1,34 @@
+{
+	"header": {
+		"homeLink": "Изучаем React",
+		"logoAltText": "глазастая иконка"
+	},
+	"auth": {
+		"welcome": "Привет, {{login}}"
+	},
+	"signup": {
+		"loginLabel": "логин",
+		"loginPlaceholder": "ваш логин",
+		"passwordLabel": "пароль",
+		"passwordPlaceholder": "введите ваш пароль",
+		"button": "зарегистрироваться",
+		"userExist": "пользователь с логином {{login}} уже зарегистрирован",
+		"serverError": "код ошибки регистрации {{errorCode}}"
+	},
+	"createTodo": {
+		"title": "Новая задача",
+		"name": "Название:",
+		"namePlaceholder": "введите название задачи",
+		"content": "Описание:",
+		"contentPlaceholder": "введите описание задачи",
+		"button": "Создать"
+	},
+	"navLinks": {
+		"login": "логин",
+		"signup": "зарегистрироваться",
+		"users": "пользователи",
+		"todo": "задачи",
+		"examples": "примеры",
+		"recoil": "recoil"
+	}
+}

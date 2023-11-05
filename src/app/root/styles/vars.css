@@ -1,0 +1,13 @@
+:root {
+	--black: oklch(0% 0 0);
+	--brand: oklch(44.85% 0.08 218);
+	--text-alt: oklch(32.76% 0.068 257.27);
+	--text-alt-lighten: oklch(53.78% 0.17 39.15);
+	--outline-color: oklch(53.78% 0.17 39.15);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+	}
+}

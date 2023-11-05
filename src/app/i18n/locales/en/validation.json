@@ -1,0 +1,8 @@
+{
+	"loginRequired": "login is required",
+	"loginLong": "login must be {{number}} or more characters long",
+	"passwordRequired": "password is required",
+	"passwordLong": "password must be {{number}} or more characters long",
+	"nameRequired": "name is required",
+	"require": "{{field}} is required"
+}
