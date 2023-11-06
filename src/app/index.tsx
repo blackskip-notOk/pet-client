@@ -9,7 +9,7 @@ import { RouterProvider } from 'react-router-dom'
 import { queryClient } from '~queryClient'
 import { router } from '~router'
 
-import './index.scss'
+import './styles/index.scss'
 
 attachLogger()
 

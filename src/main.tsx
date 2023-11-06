@@ -1,7 +1,8 @@
-import { App } from './app/root'
 import { StrictMode } from 'react'
 
 import { createRoot } from 'react-dom/client'
+
+import { App } from './app'
 
 import './app/i18n'
 

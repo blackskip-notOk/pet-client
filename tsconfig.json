@@ -10,7 +10,6 @@
       "DOM.Iterable",
       "ESNext",
       "Decorators",
-      "ESNext.Decorators",
       "WebWorker",
       "WebWorker.ImportScripts",
       "Webworker.Iterable"
@@ -46,7 +45,6 @@
     "noEmit": true,
     "allowImportingTsExtensions": true,
     "allowArbitraryExtensions": true,
-    "isolatedModules": true,
     "verbatimModuleSyntax": true,
     "noResolve": false,
     "resolveJsonModule": true,
@@ -114,6 +112,7 @@
     "src/app/i18n/locales/en/validation.json",
     "src/app/i18n/locales/ru/common.json",
     "src/app/i18n/locales/ru/glossary.json",
-    "src/app/i18n/locales/ru/validation.json"
+    "src/app/i18n/locales/ru/validation.json",
+    "@types"
   ],
 }
