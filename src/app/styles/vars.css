@@ -1,11 +1,12 @@
 :root {
-	--brand-black: oklch(16.9% 0.031 222.65);
-	--brand: oklch(44.85% 0.08 218);
-	--text-alt: oklch(32.76% 0.068 257.27);
-	--text-alt-lighten: oklch(53.78% 0.17 39.15);
-	--outline-color: oklch(53.78% 0.17 39.15);
-	--border-color: oklch(60.24% 0.101 197.4);
-	--border-color-hover: color-mix(in oklch, var(--brand) 50%, var(--brand-black));
+	--brand-black: oklch(16.9% 0.031 222.65deg);
+	--brand: oklch(44.85% 0.08 218deg);
+	--text-alt: oklch(32.76% 0.068 257.27deg);
+	--text-alt-lighten: oklch(53.78% 0.17 39.15deg);
+	--outline-color: oklch(53.78% 0.17 39.15deg);
+	--border-color: oklch(60.24% 0.101 197.4deg);
+	--border-color-hover: color-mix(in oklch, var(--brand), transparent 50%);
+	--surface-shadow: oklch(81.57% 0.07 171.43deg);
 }
 
 @media (prefers-color-scheme: dark) {

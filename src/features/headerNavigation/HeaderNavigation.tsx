@@ -2,7 +2,7 @@ import type { FC } from 'react'
 
 import { NavigationLink } from '~shared/ui/navigationLink'
 
-import { linkList } from './index.module.scss'
+import { linkList } from './index.module.css'
 import { navLinks } from './navLinks'
 
 export const HeaderNavigation: FC = () => {

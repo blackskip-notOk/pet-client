@@ -1,13 +1,11 @@
 {
 	"extends": [
-		"stylelint-config-recommended-scss",
-		"stylelint-config-clean-order",
-		"stylelint-config-prettier-scss"
+		"stylelint-config-standard",
+		"stylelint-config-clean-order"
 	],
 	"plugins": [
 		"stylelint-gamut",
-		"stylelint-high-performance-animation",
-		"stylelint-scss"
+		"stylelint-high-performance-animation"
 	],
 	"defaultSeverity": "warning",
 	"rules": {
@@ -48,9 +46,7 @@
 		],
 		"color-function-notation": "modern",
 		"gamut/color-no-out-gamut-range": true,
-		"plugin/no-low-performance-animation-properties": true,
-		"scss/at-rule-no-unknown": true,
-		"scss/at-if-no-null": null
+		"plugin/no-low-performance-animation-properties": true
 	},
 	"allowEmptyInput": true,
 	"fix": true,

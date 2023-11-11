@@ -6,12 +6,11 @@ import { attachLogger } from 'effector-logger'
 import { useEvent } from 'effector-react'
 import { useTranslation } from 'react-i18next'
 import { RouterProvider } from 'react-router-dom'
-
 import { queryClient } from '~queryClient'
 import { router } from '~router'
 
 import * as model from './model'
-import './styles/index.scss'
+import './styles/index.css'
 
 attachLogger()
 

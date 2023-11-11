@@ -8,7 +8,7 @@ import { ThemeSwitcher } from '~features/switchTheme'
 import { paths } from '~router'
 import eyes from '~shared/assets/eyes.svg'
 
-import { header, iconsContainer, logo, navlink } from './index.module.scss'
+import { header, iconsContainer, logo, navlink } from './index.module.css'
 
 export const Header: FC = () => {
 	const { t } = useTranslation('common', { keyPrefix: 'header' })
