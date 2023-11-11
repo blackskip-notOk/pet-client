@@ -1,9 +1,11 @@
 :root {
-	--black: oklch(0% 0 0);
+	--brand-black: oklch(16.9% 0.031 222.65);
 	--brand: oklch(44.85% 0.08 218);
 	--text-alt: oklch(32.76% 0.068 257.27);
 	--text-alt-lighten: oklch(53.78% 0.17 39.15);
 	--outline-color: oklch(53.78% 0.17 39.15);
+	--border-color: oklch(60.24% 0.101 197.4);
+	--border-color-hover: color-mix(in oklch, var(--brand) 50%, var(--brand-black));
 }
 
 @media (prefers-color-scheme: dark) {

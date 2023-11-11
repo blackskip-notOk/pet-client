@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom'
 
 import { HeaderNavigation } from '~features/headerNavigation'
 import { ThemeSwitcher } from '~features/switchTheme'
-import eyes from '~icons/eyes.svg'
 import { paths } from '~router'
+import eyes from '~shared/assets/eyes.svg'
 
 import { header, iconsContainer, logo, navlink } from './index.module.scss'
 

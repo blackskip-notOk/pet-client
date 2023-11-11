@@ -13,8 +13,6 @@ export const queryClient = new QueryClient({
 		mutations: {
 			retry: 0
 		},
-		queries: {
-			suspense: true
-		}
+		queries: {}
 	}
 })
