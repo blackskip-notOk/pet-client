@@ -4,9 +4,23 @@
 	--text-alt: oklch(32.76% 0.068 257.27deg);
 	--text-alt-lighten: oklch(53.78% 0.17 39.15deg);
 	--outline-color: oklch(53.78% 0.17 39.15deg);
+	--background-color: oklch(97.51% 0.018 137.8deg);
 	--border-color: oklch(60.24% 0.101 197.4deg);
-	--border-color-hover: color-mix(in oklch, var(--brand), transparent 50%);
+	--border-color-hover: color-mix(in oklch, var(--border-color) 100%, transparent 25%);
 	--surface-shadow: oklch(81.57% 0.07 171.43deg);
+}
+
+[data-theme='dark'] {
+	--brand-black: oklch(16.9% 0.031 222.65deg);
+	--background-color: oklch(32.76% 0.068 257.27deg);
+
+	/* --brand: oklch(44.85% 0.08 218deg);
+	--text-alt: oklch(32.76% 0.068 257.27deg);
+	--text-alt-lighten: oklch(53.78% 0.17 39.15deg);
+	--outline-color: oklch(53.78% 0.17 39.15deg);
+	--border-color: oklch(60.24% 0.101 197.4deg);
+	--border-color-hover: color-mix(in oklch, var(--border-color) 100%, transparent 25%);
+	--surface-shadow: oklch(81.57% 0.07 171.43deg); */
 }
 
 @media (prefers-color-scheme: dark) {

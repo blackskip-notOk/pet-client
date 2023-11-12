@@ -12,11 +12,10 @@
 	&::before {
 		content: none;
 	}
+
 	&:focus-visible {
 		border-radius: 4px;
-		outline-color: var(--outline-color);
-		outline-style: ridge;
-		outline-width: medium;
+		outline: var(--outline-color) ridge medium;
 		outline-offset: 4px;
 	}
 }
@@ -24,6 +23,7 @@
 .logo {
 	width: 56px;
 	height: 56px;
+
 	&:hover,
 	&:focus {
 		filter: invert(100%);
@@ -33,5 +33,4 @@
 .iconsContainer {
 	display: flex;
 	gap: 8px;
-	border: 1px solid red;
 }

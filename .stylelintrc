@@ -46,7 +46,8 @@
 		],
 		"color-function-notation": "modern",
 		"gamut/color-no-out-gamut-range": true,
-		"plugin/no-low-performance-animation-properties": true
+		"plugin/no-low-performance-animation-properties": true,
+		"selector-class-pattern": null
 	},
 	"allowEmptyInput": true,
 	"fix": true,

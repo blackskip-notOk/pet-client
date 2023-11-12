@@ -1,5 +1,5 @@
-@import './normalize.css';
-@import './vars.css';
+@import url('./normalize.css');
+@import url('./vars.css');
 
 html {
 	scroll-behavior: smooth;
@@ -8,6 +8,7 @@ html {
 body {
 	font-family: Decovar, sans-serif;
 	font-variation-settings: 'TRMA' 1000;
+	background-color: var(--background-color);
 }
 
 @supports (font-variation-settings: normal) {

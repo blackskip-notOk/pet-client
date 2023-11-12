@@ -1,62 +1,90 @@
-import type { FC, FormEvent } from 'react'
+import { useEffect, useMemo, useRef, type FC } from 'react'
 
 import { useEvent, useStore } from 'effector-react'
 import { useTranslation } from 'react-i18next'
-import * as model from '~entities/theme'
-import * as modelThemeSwitcher from './model'
+import { themeModel, type TTheme } from '~entities/theme'
 
-import { auto, dark, legend, light, radio, status, switcher } from './index.module.css'
+import { active, auto, dark, icon, iconsContainer, legend, light, switcher } from './index.module.css'
 
 export const ThemeSwitcher: FC = () => {
 	const { t } = useTranslation('glossary')
 
-	const theme = useStore(model.$theme)
-	const onThemeSave = useEvent(modelThemeSwitcher.themeSaveClicked)
-	// const onThemeDelete = useEvent(model.themeDeleteClicked)
+	const theme = useStore(themeModel.$theme)
+	const onThemeSave = useEvent(themeModel.themeSaveClicked)
+	const onThemeDelete = useEvent(themeModel.themeDeleteClicked)
 
-	const handleChange = (event: FormEvent<HTMLFieldSetElement>) => {
-		const target = event.target as HTMLInputElement
+	const autoRef = useRef<HTMLSpanElement | null>(null)
+	const lightRef = useRef<HTMLSpanElement | null>(null)
+	const darkRef = useRef<HTMLSpanElement | null>(null)
 
-		target.value === 'auto' ? localStorage.removeItem('theme') : localStorage.setItem('theme', target.value)
+	const themesSwitched: Record<TTheme, () => void> = useMemo(
+		() => ({
+			auto: () => {
+				autoRef.current?.classList.add(active)
+				darkRef.current?.classList.remove(active)
+				lightRef.current?.classList.remove(active)
+			},
+			dark: () => {
+				darkRef.current?.classList.add(active)
+				lightRef.current?.classList.remove(active)
+				autoRef.current?.classList.remove(active)
+			},
+			light: () => {
+				autoRef.current?.classList.remove(active)
+				lightRef.current?.classList.add(active)
+				darkRef.current?.classList.remove(active)
+			}
+		}),
+		[]
+	)
 
-		// setTheme(target.value)
+	useEffect(() => {
+		themesSwitched[theme]()
+	}, [theme, themesSwitched])
 
-		document.documentElement.setAttribute('data-theme', target.value)
+	const handleClick = () => {
+		const themes: Record<TTheme, TTheme> = {
+			auto: 'light',
+			dark: 'auto',
+			light: 'dark'
+		}
+
+		const nextTheme = themes[theme]
+
+		if (nextTheme === 'auto') {
+			onThemeDelete()
+			return
+		}
+
+		onThemeSave(nextTheme)
 	}
 
-	const options = [
-		{
-			className: `${radio} ${light}`,
-			value: 'light'
-		},
-		{
-			className: `${radio} ${auto}`,
-			value: 'auto'
-		},
-		{
-			className: `${radio} ${dark}`,
-			value: 'dark'
-		}
-	]
-
 	return (
-		<fieldset
+		<button
+			aria-label={t('switchTitle', { theme })}
 			className={switcher}
-			onChange={handleChange}
+			name='theme switcher'
+			type='button'
+			onClick={handleClick}
 		>
-			<legend className={legend}>{t('theme')}</legend>
-			{options.map(({ className, value }) => (
-				<input
-					aria-label={value}
-					checked={value === theme}
-					className={className}
-					key={value}
-					name='color-theme'
-					type='radio'
-					value={value}
+			<div className={iconsContainer}>
+				<span
+					className={`${icon} ${auto}`}
+					id='auto'
+					ref={autoRef}
 				/>
-			))}
-			<div className={status} />
-		</fieldset>
+				<span
+					className={`${icon} ${light}`}
+					id='light'
+					ref={lightRef}
+				/>
+				<span
+					className={`${icon} ${dark}`}
+					id='dark'
+					ref={darkRef}
+				/>
+			</div>
+			<legend className={legend}>{t('switchTitle', { theme })}</legend>
+		</button>
 	)
 }

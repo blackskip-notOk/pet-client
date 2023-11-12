@@ -1,5 +1,5 @@
 {
 	"loading": "Loading...",
 	"theme": "Theme",
-	"toggleTitle": "Toggle light and dark"
+	"switchTitle": "Switch to {{theme}} mode"
 }
