@@ -5,9 +5,13 @@
 	--text-alt-lighten: oklch(53.78% 0.17 39.15deg);
 	--outline-color: oklch(53.78% 0.17 39.15deg);
 	--background-color: oklch(97.51% 0.018 137.8deg);
-	--border-color: oklch(60.24% 0.101 197.4deg);
+	--border-color: oklch(41.01% 0.088 245.62deg);
 	--border-color-hover: color-mix(in oklch, var(--border-color) 100%, transparent 25%);
 	--surface-shadow: oklch(81.57% 0.07 171.43deg);
+	--border-color-1: oklch(54.58% 0.248 295.88deg);
+	--border-color-2: oklch(64.06% 0.26 8.07deg);
+	--border-color-3: oklch(63.71% 0.195 259.51deg);
+	--border-color-4: oklch(67.07% 0.212 39.04deg);
 }
 
 [data-theme='dark'] {

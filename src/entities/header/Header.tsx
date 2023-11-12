@@ -2,7 +2,6 @@ import type { FC } from 'react'
 
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
-
 import { HeaderNavigation } from '~features/headerNavigation'
 import { ThemeSwitcher } from '~features/switchTheme'
 import { paths } from '~router'
@@ -16,6 +15,7 @@ export const Header: FC = () => {
 	return (
 		<header className={header}>
 			<NavLink
+				aria-label='home page link'
 				className={navlink}
 				to={paths.root}
 			>

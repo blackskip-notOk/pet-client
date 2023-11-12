@@ -9,25 +9,29 @@
 }
 
 .navlink {
-	&::before {
-		content: none;
-	}
+	transition: filter 300ms ease-in-out;
 
 	&:focus-visible {
+		filter: invert(100%);
 		border-radius: 4px;
-		outline: var(--outline-color) ridge medium;
-		outline-offset: 4px;
+		outline: var(--outline-color) ridge 2px;
+		outline-offset: 2px;
+	}
+
+	&:hover {
+		filter: invert(100%);
+	}
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	.navlink {
+		transition: none;
 	}
 }
 
 .logo {
 	width: 56px;
 	height: 56px;
-
-	&:hover,
-	&:focus {
-		filter: invert(100%);
-	}
 }
 
 .iconsContainer {

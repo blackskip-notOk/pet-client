@@ -30,11 +30,10 @@
 	&:focus-visible {
 		color: var(--outline-color);
 
-		border-radius: 4px;
-		outline-color: var(--outline-color);
-		outline-style: ridge;
-		outline-width: medium;
-		outline-offset: 4px;
+		border-radius: 2px;
+		outline: var(--outline-color) ridge 2px;
+		outline-offset: 2px;
+
 		&::before {
 			transform: scaleX(0);
 		}

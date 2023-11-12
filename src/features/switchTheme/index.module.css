@@ -5,40 +5,57 @@
 }
 
 .switcher {
+	--border-top-color: var(--border-color-1);
+	--border-right-color: var(--border-color-2);
+	--border-bottom-color: var(--border-color-3);
+	--border-left-color: var(--border-color-4);
+
 	overflow: hidden;
 
 	width: 56px;
 	height: 56px;
 	margin: 0;
 
-	border: 2px solid var(--border-color);
+	border: 2px solid;
+	border-color: var(--border-top-color) var(--border-right-color) var(--border-bottom-color) var(--border-left-color);
 	border-radius: 50%;
 
-	transition: filter 200ms ease-in-out;
+	transition: filter 300ms ease-in-out;
+	animation-name: button-rotate;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+
+	&:hover {
+		filter: hue-rotate(-90deg) brightness(0.85);
+	}
+
+	&:focus-visible {
+		filter: brightness(0.85);
+		border: none;
+		outline: var(--outline-color) ridge 2px;
+		outline-offset: -2px;
+	}
 }
 
-.switcher:hover {
-	filter: brightness(1.1);
+@keyframes button-rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
 }
 
-.switcher:focus-visible {
-	filter: brightness(1.1);
-	border: none;
-	outline: var(--outline-color) ridge 4px;
-	outline-offset: -4px;
-}
-
-.legend {
+.switcherCaption {
 	position: absolute;
 
 	overflow: hidden;
 
 	width: 1px;
 	height: 1px;
-	margin: -1px;
-	padding: 0;
-
-	white-space: nowrap;
 
 	clip-path: polygon(0% 0, 100% 0);
 	border: 0;
@@ -85,14 +102,18 @@
 	background-image: url('../../shared/assets/settings.svg');
 }
 
-.active.auto {
-	transform: translate(0) scale(1);
-}
+.active {
+	transform: scale(1);
 
-.active.light {
-	transform: rotate(0deg) translate(0) scale(1);
-}
+	&.auto {
+		transform: translate(0);
+	}
 
-.active.dark {
-	transform: rotate(0deg) translate(0) scale(1);
+	&.light {
+		transform: rotate(0deg) translate(0);
+	}
+
+	&.dark {
+		transform: rotate(0deg) translate(0);
+	}
 }

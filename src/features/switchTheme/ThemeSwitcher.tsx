@@ -4,7 +4,7 @@ import { useEvent, useStore } from 'effector-react'
 import { useTranslation } from 'react-i18next'
 import { themeModel, type TTheme } from '~entities/theme'
 
-import { active, auto, dark, icon, iconsContainer, legend, light, switcher } from './index.module.css'
+import { active, auto, dark, icon, iconsContainer, light, switcher, switcherCaption } from './index.module.css'
 
 export const ThemeSwitcher: FC = () => {
 	const { t } = useTranslation('glossary')
@@ -84,7 +84,7 @@ export const ThemeSwitcher: FC = () => {
 					ref={darkRef}
 				/>
 			</div>
-			<legend className={legend}>{t('switchTitle', { theme })}</legend>
+			<span className={switcherCaption}>{t('switchTitle', { theme })}</span>
 		</button>
 	)
 }
