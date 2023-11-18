@@ -11,7 +11,7 @@
 
 		width: 100%;
 
-		border-bottom: 2px solid var(--brand);
+		border-bottom: 2px solid var(--text-alt);
 
 		transition: transform 0.5s ease;
 	}
@@ -20,16 +20,16 @@
 	&:focus::before,
 	&:focus-visible {
 		transform: scaleX(1);
+		border-bottom-color: var(--text-alt-hover);
 	}
 
 	&:hover,
 	&:focus {
-		color: var(--brand);
+		color: var(--text-alt-hover);
 	}
 
 	&:focus-visible {
 		color: var(--outline-color);
-
 		border-radius: 2px;
 		outline: var(--outline-color) ridge 2px;
 		outline-offset: 2px;
@@ -49,7 +49,7 @@
 }
 
 .active {
-	color: var(--brand);
+	color: var(--text-alt-hover);
 
 	&::before {
 		content: '';
@@ -60,6 +60,6 @@
 
 		width: 100%;
 
-		border-bottom: 2px solid var(--brand);
+		border-bottom: 2px solid var(--text-alt-hover);
 	}
 }

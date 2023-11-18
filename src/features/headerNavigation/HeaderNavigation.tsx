@@ -8,10 +8,7 @@ import { navLinks } from './navLinks'
 export const HeaderNavigation: FC = () => {
 	const links = navLinks.map(({ title, ...rest }) => (
 		<li key={title}>
-			<NavigationLink
-				children={title}
-				{...rest}
-			/>
+			<NavigationLink {...rest}>{title}</NavigationLink>
 		</li>
 	))
 
