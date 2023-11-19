@@ -2,10 +2,10 @@ import { createEffect } from 'effector'
 
 export type TTheme = 'dark' | 'light' | 'auto'
 
-const LocalStorageThemeKey = 'theme'
+const LocalStorageKey = 'theme'
 
 export function loadTheme(): TTheme {
-	const loadedTheme = localStorage.getItem(LocalStorageThemeKey) as TTheme
+	const loadedTheme = localStorage.getItem(LocalStorageKey) as TTheme
 
 	if (loadedTheme) {
 		document.documentElement.setAttribute('data-theme', loadedTheme)
@@ -17,12 +17,12 @@ export function loadTheme(): TTheme {
 }
 
 export function saveTheme(theme: TTheme) {
-	localStorage.setItem(LocalStorageThemeKey, theme)
+	localStorage.setItem(LocalStorageKey, theme)
 	document.documentElement.setAttribute('data-theme', theme)
 }
 
 export function deleteTheme() {
-	localStorage.removeItem(LocalStorageThemeKey)
+	localStorage.removeItem(LocalStorageKey)
 	document.documentElement.removeAttribute('data-theme')
 }
 

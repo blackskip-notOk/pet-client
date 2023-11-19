@@ -3,6 +3,7 @@ import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import { HeaderNavigation } from '~features/headerNavigation'
+import { LanguageSelector } from '~features/selectLanguage'
 import { ThemeSwitcher } from '~features/switchTheme'
 import { paths } from '~router'
 import eyes from '~shared/assets/eyes.svg'
@@ -28,7 +29,7 @@ export const Header: FC = () => {
 			<HeaderNavigation />
 			<div className={iconsContainer}>
 				<ThemeSwitcher />
-				<div>lang</div>
+				<LanguageSelector />
 				<div>profile</div>
 			</div>
 		</header>

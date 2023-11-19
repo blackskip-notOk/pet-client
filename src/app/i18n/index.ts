@@ -3,6 +3,7 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import ChainedBackend, { type ChainedBackendOptions } from 'i18next-chained-backend'
 import HttpApi from 'i18next-http-backend'
 import LocalStorageBackend from 'i18next-localstorage-backend'
+
 import { initReactI18next } from 'react-i18next'
 
 import * as commonEn from './locales/en/common.json'
@@ -51,7 +52,7 @@ i18n.use(ChainedBackend)
 			escapeValue: false
 		},
 		ns: ['common', 'validation', 'glossary'],
-		preload: ['ru'],
+		// preload: ['ru'],
 		react: {
 			bindI18n: 'languageChanged',
 			useSuspense: true
@@ -59,13 +60,5 @@ i18n.use(ChainedBackend)
 		resources,
 		supportedLngs: ['en', 'ru']
 	})
-
-i18n.on('initialized', options => {
-	console.info('i18n initialization success', options)
-})
-
-i18n.on('languageChanged', lng => {
-	console.info('i18n language changed to:', lng)
-})
 
 export default i18n

@@ -1,5 +1,7 @@
 {
 	"loading": "Loading...",
 	"theme": "Theme",
-	"switchTitle": "Switch to {{theme}} mode"
+	"switchTitle": "Switched to {{theme}} mode",
+	"lng": "Language",
+	"selectTitle": "{{lng}} language selected"
 }

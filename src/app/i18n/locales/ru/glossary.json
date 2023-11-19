@@ -1,5 +1,7 @@
 {
 	"loading": "5 сек...",
 	"theme": "Тема",
-	"switchTitle": "Переключение в {{theme}} режим"
+	"switchTitle": "Переключено в {{theme}} режим",
+	"lng": "Язык",
+	"selectTitle": "Выбран язык {{lng}}"
 }

@@ -1,4 +1,4 @@
-import { useEffect, type FC } from 'react'
+import { Suspense, useEffect, type FC } from 'react'
 
 import { QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
@@ -24,12 +24,14 @@ export const App: FC = () => {
 	}, [handlePageMounted])
 
 	return (
-		<QueryClientProvider client={queryClient}>
-			<RouterProvider
-				fallbackElement={<div>{t('loading')}</div>}
-				router={router}
-			/>
-			<ReactQueryDevtools initialIsOpen={false} />
-		</QueryClientProvider>
+		<Suspense fallback='...Loading'>
+			<QueryClientProvider client={queryClient}>
+				<RouterProvider
+					fallbackElement={<div>{t('loading')}</div>}
+					router={router}
+				/>
+				<ReactQueryDevtools initialIsOpen={false} />
+			</QueryClientProvider>
+		</Suspense>
 	)
 }

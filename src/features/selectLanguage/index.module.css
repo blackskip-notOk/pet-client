@@ -1,0 +1,99 @@
+.selectCaption {
+	position: absolute;
+
+	overflow: hidden;
+
+	width: 1px;
+	height: 1px;
+
+	clip-path: polygon(0% 0, 100% 0);
+	border: 0;
+}
+
+.select {
+	--flag-url: url('/src/shared/assets/um.svg');
+
+	width: 56px;
+	height: 56px;
+
+	background-image: var(--flag-url);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	border-radius: 50%;
+
+	&:hover {
+		filter: hue-rotate(90deg) brightness(0.9);
+	}
+
+	&:focus-visible {
+		filter: hue-rotate(90deg) brightness(0.9);
+		border: none;
+		outline: var(--outline-color) ridge 2px;
+		outline-offset: -2px;
+	}
+}
+
+.ru {
+	--flag-url: url('/src/shared/assets/ru.svg');
+
+	animation-name: change-lng-ru;
+	animation-duration: 750ms;
+	animation-timing-function: ease-in-out;
+}
+
+.en {
+	--flag-url: url('/src/shared/assets/um.svg');
+
+	animation-name: change-lng-en;
+	animation-duration: 750ms;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes change-lng-ru {
+	0% {
+		--flag-url: url('/src/shared/assets/um.svg');
+
+		rotate: 0deg;
+		scale: 1;
+	}
+
+	30% {
+		--flag-url: url('/src/shared/assets/um.svg');
+	}
+
+	50% {
+		rotate: 360deg;
+		scale: 0;
+		opacity: 0.5;
+	}
+
+	100% {
+		rotate: 0deg;
+		scale: 1;
+	}
+}
+
+@keyframes change-lng-en {
+	0% {
+		--flag-url: url('/src/shared/assets/ru.svg');
+
+		rotate: 360deg;
+		scale: 1;
+	}
+
+	30% {
+		--flag-url: url('/src/shared/assets/ru.svg');
+	}
+
+	50% {
+		rotate: 0deg;
+		scale: 0;
+		opacity: 0.5;
+	}
+
+	100% {
+		rotate: 360deg;
+		scale: 1;
+	}
+}
