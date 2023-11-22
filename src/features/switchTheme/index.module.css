@@ -27,6 +27,10 @@
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 
+	&:active {
+		animation-duration: 300ms;
+	}
+
 	&:hover {
 		filter: hue-rotate(-90deg) brightness(0.85);
 	}
