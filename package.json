@@ -19,7 +19,7 @@
 	"dependencies": {
 		"@hookform/error-message": "^2.0.1",
 		"@hookform/resolvers": "^3.3.2",
-		"@tanstack/react-query": "^5.8.4",
+		"@tanstack/react-query": "^5.8.6",
 		"axios": "^1.6.2",
 		"effector": "^22.8.7",
 		"effector-react": "^22.5.4",
@@ -33,13 +33,13 @@
 		"react-dom": "^18.2.0",
 		"react-hook-form": "^7.48.2",
 		"react-i18next": "^13.5.0",
-		"react-router-dom": "^6.19.0"
+		"react-router-dom": "^6.20.0"
 	},
 	"devDependencies": {
 		"@hookform/devtools": "^4.3.1",
-		"@tanstack/react-query-devtools": "^5.8.4",
+		"@tanstack/react-query-devtools": "^5.8.6",
 		"@types/eslint": "^8.44.7",
-		"@types/node": "^20.9.4",
+		"@types/node": "^20.10.0",
 		"@types/react": "^18.2.38",
 		"@types/react-dom": "^18.2.17",
 		"@typescript-eslint/eslint-plugin": "^6.12.0",
@@ -56,7 +56,7 @@
 		"eslint-plugin-import": "^2.29.0",
 		"eslint-plugin-jsonc": "^2.10.0",
 		"eslint-plugin-jsx-a11y": "^6.8.0",
-		"eslint-plugin-perfectionist": "^2.4.0",
+		"eslint-plugin-perfectionist": "^2.4.1",
 		"eslint-plugin-playwright": "^0.18.0",
 		"eslint-plugin-react": "^7.33.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
