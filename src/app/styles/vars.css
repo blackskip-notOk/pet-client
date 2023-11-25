@@ -13,6 +13,9 @@
 	--border-color-2: oklch(64.06% 0.26 8.07deg);
 	--border-color-3: oklch(63.71% 0.195 259.51deg);
 	--border-color-4: oklch(67.07% 0.212 39.04deg);
+	--header-height-xl: 56px;
+	--header-height-md: 44px;
+	--header-height: var(--header-height-xl);
 
 	color-scheme: light;
 }
@@ -44,4 +47,10 @@
 	--outline-color: oklch(81.71% 0.103 295.35deg);
 
 	color-scheme: dark;
+}
+
+@media (500px <= width <= 730px) {
+	:root {
+		--header-height: var(--header-height-md)
+	}
 }

@@ -13,8 +13,8 @@
 .select {
 	--flag-url: url('/src/shared/assets/um.svg');
 
-	width: 56px;
-	height: 56px;
+	width: var(--header-height);
+	height: var(--header-height);
 
 	background-image: var(--flag-url);
 	background-repeat: no-repeat;

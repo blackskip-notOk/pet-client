@@ -7,20 +7,21 @@ import { LazyTodo } from '~pages/todo'
 import { LazyUsers } from '~pages/users'
 import { SuspenseComponent } from '~shared/components'
 
+import { LazyLogin } from '~pages/login'
 import { paths } from './paths'
 
 export const routes: Array<RouteObject> = [
 	{
-		// children: [
-		// 	{
-		// 		element: <SuspenseComponent LazyComponent={LazyLogin} />,
-		// 		path: paths.login,
-		// 	},
-		// 	{
-		// 		element: <SuspenseComponent LazyComponent={LazySignup} />,
-		// 		path: paths.signup,
-		// 	},
-		// ],
+		children: [
+			{
+				element: <SuspenseComponent LazyComponent={LazyLogin} />,
+				path: paths.login
+			}
+			// {
+			// 	element: <SuspenseComponent LazyComponent={LazySignup} />,
+			// 	path: paths.signup,
+			// },
+		],
 		element: <HomePage />,
 		errorElement: <SuspenseComponent LazyComponent={LazyNotFound} />,
 		path: paths.root

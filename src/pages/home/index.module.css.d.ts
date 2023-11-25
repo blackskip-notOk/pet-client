@@ -1,5 +1,5 @@
 declare const styles: {
-  readonly "linkList": string;
+  readonly "main": string;
 };
 export = styles;
 

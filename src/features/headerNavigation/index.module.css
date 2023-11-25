@@ -1,5 +1,13 @@
 .linkList {
+	container-name: linklist;
+	container-type: inline-size;
 	display: flex;
 	gap: 16px;
 	justify-content: space-around;
+}
+
+@container linkList (width <= 300px) {
+	li > a {
+		font-size: 12px;
+	}
 }

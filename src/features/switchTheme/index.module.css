@@ -12,8 +12,8 @@
 
 	overflow: hidden;
 
-	width: 56px;
-	height: 56px;
+	width: var(--header-height);
+	height: var(--header-height);
 	margin: 0;
 
 	border: 2px solid;
