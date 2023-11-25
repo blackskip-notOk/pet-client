@@ -1,7 +1,9 @@
 {
 	"header": {
 		"homeLink": "Learn React",
-		"logoAltText": "icon with eyes"
+		"linkAriaLabel": "{{path}} page link",
+		"logoAltText": "icon with eyes",
+		"iconAltText": "{{path}} icon"
 	},
 	"auth": {
 		"welcome": "Hi, {{login}}"

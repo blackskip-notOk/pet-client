@@ -36,5 +36,12 @@
 
 .iconsContainer {
 	display: flex;
-	gap: 8px;
+	gap: 16px;
+}
+
+
+.loginLink {
+	width: 56px;
+	height: 56px;
+	scale: 1.25;
 }

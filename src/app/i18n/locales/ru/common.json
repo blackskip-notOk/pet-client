@@ -1,7 +1,9 @@
 {
 	"header": {
 		"homeLink": "Изучаем React",
-		"logoAltText": "глазастая иконка"
+		"linkAriaLabel": "ссылка на страницу {{path}}",
+		"logoAltText": "глазастая иконка",
+		"iconAltText": "иконка {{path}}"
 	},
 	"auth": {
 		"welcome": "Привет, {{login}}"

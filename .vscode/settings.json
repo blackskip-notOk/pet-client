@@ -20,5 +20,6 @@
 	"cSpell.words": ["risd"],
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"workbench.preferredHighContrastLightColorTheme": "Quiet Light",
-	"workbench.preferredHighContrastColorTheme": "Shades of Purple"
+	"workbench.preferredHighContrastColorTheme": "Shades of Purple",
+	"workbench.colorTheme": "Tomorrow Night Blue"
 }
