@@ -2,7 +2,10 @@
 	"name": "client",
 	"version": "0.0.1",
 	"description": "react 18 client app",
-	"keywords": ["react", "vite"],
+	"keywords": [
+		"react",
+		"vite"
+	],
 	"homepage": "https://client-server-client.vercel.app/",
 	"license": "UNLICENSED",
 	"author": "Ilya Babanov <ilbabanov@gmail.com> (https://github.com/blackskip-notOk)",
@@ -14,8 +17,7 @@
 		"build": "tsc && vite build",
 		"format": "biome format src --write",
 		"lint": "biome lint --apply --files-ignore-unknown=true --colors=force --log-level=info src",
-		"stylelint": "stylelint --aei --color --fix -f --rdd --risd --rd  \"**/*.css\"",
-		"pre-commit-lint": "yarn lint-staged"
+		"stylelint": "stylelint --aei --color --fix -f --rdd --risd --rd  \"**/*.css\""
 	},
 	"dependencies": {
 		"@hookform/error-message": "^2.0.1",
@@ -60,7 +62,6 @@
 		"vite": "^5.0.2",
 		"vite-plugin-gen-typed-css-modules": "^0.1.1",
 		"vite-plugin-i18next-loader": "^2.0.4",
-		"vite-plugin-pwa": "^0.17.0",
 		"zod": "^3.22.4"
 	},
 	"packageManager": "yarn@4.0.1",

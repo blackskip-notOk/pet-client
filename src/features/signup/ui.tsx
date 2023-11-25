@@ -37,12 +37,12 @@ export const SignupForm = () => {
 			if (response?.data && isDBError(response.data)) {
 				const message =
 					response.data.cause.name === DBExceptionEnum.enum.PrismaClientKnownRequestError
-						? t('userExist', { login: variables.login })
+						? t('userExist', { login: variables?.login })
 						: t('serverError', { errorCode: status })
 				setServerError(message)
 			}
 		}
-	}, [isError, error, t, variables.login])
+	}, [isError, error, t, variables?.login])
 
 	useEffect(() => {
 		if (isSuccess && data) {

@@ -17,7 +17,8 @@
 			"./package.json",
 			"./.stylelintrc",
 			"./.stylelintignore",
-			"./.lintstagedrc.json"
+			"./.lintstagedrc.json",
+			"./.vscode/settings.json"
 		],
 		"ignoreUnknown": true
 	},

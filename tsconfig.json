@@ -56,9 +56,6 @@
     "disableSizeLimit": true,
     "plugins": [
       {
-        "name": "typescript-eslint-language-service"
-      },
-      {
         "name": "typescript-plugin-css-modules"
       }
     ],
