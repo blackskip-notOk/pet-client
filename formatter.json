@@ -6,7 +6,7 @@
 		"indentStyle": "tab",
 		"indentWidth": 4,
 		"lineWidth": 120,
-		"ignore": []
+		"ignore": ["./.pnp.loader.mjs", "./.pnp.cjs"]
 	},
 	"javascript": {
 		"formatter": {
@@ -15,15 +15,15 @@
 			"trailingComma": "none",
 			"semicolons": "asNeeded",
 			"arrowParentheses": "asNeeded",
-"indentStyle":"tab",
-"indentSize": 4,
-"lineWidth": 120
+			"indentStyle": "tab",
+			"indentWidth": 4,
+			"lineWidth": 120
 		}
 	},
 	"json": {
 		"formatter": {
-			"indentStyle":"tab",
-			"indentSize": 4,
+			"indentStyle": "tab",
+			"indentWidth": 4,
 			"lineWidth": 120
 		}
 	}

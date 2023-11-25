@@ -1,11 +1,11 @@
-import type { AxiosResponse } from "axios";
+import type { AxiosResponse } from 'axios'
 
-import { api, instance } from "~queryClient";
+import { api, instance } from '~queryClient'
 
-import type { TUserProfile } from ".";
+import type { TUserProfile } from '.'
 
 export function getUserProfile(): Promise<AxiosResponse<TUserProfile>> {
-	return instance.get(api.users);
+	return instance.get(api.users)
 }
 
-export const USER_QUERY_KEY = "user";
+export const USER_QUERY_KEY = 'user'

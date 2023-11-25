@@ -1,9 +1,9 @@
-import { useRouteError } from "react-router-dom";
+import { useRouteError } from 'react-router-dom'
 
-import { isErrorWithMessage } from "~shared/helpers";
+import { isErrorWithMessage } from '~shared/helpers'
 
 export const NotFound = () => {
-	const error = useRouteError();
+	const error = useRouteError()
 
 	return (
 		<section>
@@ -13,5 +13,5 @@ export const NotFound = () => {
 				<i>{isErrorWithMessage(error) && (error.statusText || error.message)}</i>
 			</p>
 		</section>
-	);
-};
+	)
+}

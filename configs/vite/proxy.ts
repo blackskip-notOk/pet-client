@@ -4,7 +4,7 @@ import { loadEnv } from 'vite'
 export function setProxyConfig(mode: string) {
 	const env = loadEnv(mode, '../env', 'CLIENT_')
 
-	const api_path = `http://${env['CLIENT_HOST']}:${env['CLIENT_API_PORT']}`
+	const api_path = `http://${env.CLIENT_HOST}:${env.CLIENT_API_PORT}`
 
 	const proxyOptions = {
 		changeOrigin: true,

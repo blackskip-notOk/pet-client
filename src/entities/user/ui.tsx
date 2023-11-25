@@ -1,21 +1,21 @@
-import type { FC } from "react";
+import type { FC } from 'react'
 
-import { useQuery } from "@tanstack/react-query";
+import { useQuery } from '@tanstack/react-query'
 
-import { USER_QUERY_KEY, getUserProfile } from "./api";
+import { USER_QUERY_KEY, getUserProfile } from './api'
 
 export const UserProfile: FC = () => {
 	const { error, isError, isPending } = useQuery({
 		queryFn: getUserProfile,
-		queryKey: [USER_QUERY_KEY],
-	});
+		queryKey: [USER_QUERY_KEY]
+	})
 
 	if (isPending) {
-		return <div>...Loading</div>;
+		return <div>...Loading</div>
 	}
 
 	if (isError && error) {
-		return <div>error</div>;
+		return <div>error</div>
 	}
 
 	return (
@@ -23,5 +23,5 @@ export const UserProfile: FC = () => {
 			<div>user</div>
 			<ul />
 		</>
-	);
-};
+	)
+}

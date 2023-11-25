@@ -1,32 +1,32 @@
-import i18n from "i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
-import ChainedBackend, { type ChainedBackendOptions } from "i18next-chained-backend";
-import HttpApi from "i18next-http-backend";
-import LocalStorageBackend from "i18next-localstorage-backend";
+import i18n from 'i18next'
+import LanguageDetector from 'i18next-browser-languagedetector'
+import ChainedBackend, { type ChainedBackendOptions } from 'i18next-chained-backend'
+import HttpApi from 'i18next-http-backend'
+import LocalStorageBackend from 'i18next-localstorage-backend'
 
-import { initReactI18next } from "react-i18next";
+import { initReactI18next } from 'react-i18next'
 
-import * as commonEn from "./locales/en/common.json";
-import * as glossaryEn from "./locales/en/glossary.json";
-import * as validationEn from "./locales/en/validation.json";
-import * as commonRu from "./locales/ru/common.json";
-import * as glossaryRu from "./locales/ru/glossary.json";
-import * as validationRu from "./locales/ru/validation.json";
+import * as commonEn from './locales/en/common.json'
+import * as glossaryEn from './locales/en/glossary.json'
+import * as validationEn from './locales/en/validation.json'
+import * as commonRu from './locales/ru/common.json'
+import * as glossaryRu from './locales/ru/glossary.json'
+import * as validationRu from './locales/ru/validation.json'
 
-export const defaultNS = "common";
+export const defaultNS = 'common'
 
 export const resources = {
 	en: {
 		common: commonEn,
 		glossary: glossaryEn,
-		validation: validationEn,
+		validation: validationEn
 	},
 	ru: {
 		common: commonRu,
 		glossary: glossaryRu,
-		validation: validationRu,
-	},
-} as const;
+		validation: validationRu
+	}
+} as const
 
 i18n.use(ChainedBackend)
 	.use(HttpApi)
@@ -37,28 +37,28 @@ i18n.use(ChainedBackend)
 			backendOptions: [
 				{
 					expirationTime: 7 * 24 * 60 * 60 * 1000,
-					prefix: "i18n_res_",
+					prefix: 'i18n_res_'
 				},
 				{
-					loadPath: "./locales/{{lng}}/{{ns}}.json",
-				},
+					loadPath: './locales/{{lng}}/{{ns}}.json'
+				}
 			],
-			backends: [LocalStorageBackend, HttpApi],
+			backends: [LocalStorageBackend, HttpApi]
 		},
 		debug: import.meta.env.DEV,
 		defaultNS,
-		fallbackLng: "en",
+		fallbackLng: 'en',
 		interpolation: {
-			escapeValue: false,
+			escapeValue: false
 		},
-		ns: ["common", "validation", "glossary"],
+		ns: ['common', 'validation', 'glossary'],
 		// preload: ['ru'],
 		react: {
-			bindI18n: "languageChanged",
-			useSuspense: true,
+			bindI18n: 'languageChanged',
+			useSuspense: true
 		},
 		resources,
-		supportedLngs: ["en", "ru"],
-	});
+		supportedLngs: ['en', 'ru']
+	})
 
-export default i18n;
+export default i18n

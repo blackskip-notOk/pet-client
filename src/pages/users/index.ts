@@ -1,3 +1,3 @@
-import { lazy } from "react";
+import { lazy } from 'react'
 
-export const LazyUsers = lazy(() => import("./Users").then((module) => ({ default: module.Users })));
+export const LazyUsers = lazy(() => import('./Users').then(module => ({ default: module.Users })))

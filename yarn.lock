@@ -2096,10 +2096,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-core@npm:5.8.6":
-  version: 5.8.6
-  resolution: "@tanstack/query-core@npm:5.8.6"
-  checksum: 0a2986df84eb5daacc3c8f44e27cf494424daaafd7a931d970fff53edc7857432caad1d3549e22e3fddf215b492f49a04034ec5246444469ebb6c991b7825dc1
+"@tanstack/query-core@npm:5.8.7":
+  version: 5.8.7
+  resolution: "@tanstack/query-core@npm:5.8.7"
+  checksum: 96a2c1434f22919787712456cabc18f62902ab0864a1aa2a81670bcaff768abecd789fbcac8b8d589709e77cd713e1716ae7a0a9b5eeaa991364a4481813ff19
   languageName: node
   linkType: hard
 
@@ -2110,24 +2110,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-query-devtools@npm:^5.8.6":
-  version: 5.8.6
-  resolution: "@tanstack/react-query-devtools@npm:5.8.6"
+"@tanstack/react-query-devtools@npm:^5.8.7":
+  version: 5.8.7
+  resolution: "@tanstack/react-query-devtools@npm:5.8.7"
   dependencies:
     "@tanstack/query-devtools": "npm:5.8.4"
   peerDependencies:
-    "@tanstack/react-query": ^5.8.6
+    "@tanstack/react-query": ^5.8.7
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 2bc1963ff4260a28eeb6517429e68a319697715c98426a8f4d59b4a3e691b3d5a3a76e67bbd45e5fbf9878892f7b1ea75147978be2dd0043f5b600612585cd2f
+  checksum: ff9f9a877097e5d82a40fb61710d67cab0410324cc3fabaf0bf1ce68d27ac5917cb34ea3aeb7deaf798a49d6dc9a6377bb998ba29e5543a22cd5baba862d0ea2
   languageName: node
   linkType: hard
 
-"@tanstack/react-query@npm:^5.8.6":
-  version: 5.8.6
-  resolution: "@tanstack/react-query@npm:5.8.6"
+"@tanstack/react-query@npm:^5.8.7":
+  version: 5.8.7
+  resolution: "@tanstack/react-query@npm:5.8.7"
   dependencies:
-    "@tanstack/query-core": "npm:5.8.6"
+    "@tanstack/query-core": "npm:5.8.7"
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
@@ -2137,7 +2137,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: e562c21c13d42e83ee9ca3eab082503a36807cf4b1c75f42f48b13da1601bc597fb5ad74d27cb46c9398f3678184afa2d2fecf58cde776f024bd051f4cd891d5
+  checksum: b6729d30a0a5cc195381b79f08d3e4af2f33d5fbf3f6a9b16907a25bf42a66bfa5433f500dc577dfccb75026bd619381f6117f314c83440807b170007d0a8619
   languageName: node
   linkType: hard
 
@@ -2850,8 +2850,8 @@ __metadata:
     "@hookform/devtools": "npm:^4.3.1"
     "@hookform/error-message": "npm:^2.0.1"
     "@hookform/resolvers": "npm:^3.3.2"
-    "@tanstack/react-query": "npm:^5.8.6"
-    "@tanstack/react-query-devtools": "npm:^5.8.6"
+    "@tanstack/react-query": "npm:^5.8.7"
+    "@tanstack/react-query-devtools": "npm:^5.8.7"
     "@types/node": "npm:^20.10.0"
     "@types/react": "npm:^18.2.38"
     "@types/react-dom": "npm:^18.2.17"
