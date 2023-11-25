@@ -19,18 +19,18 @@ ul {
 }
 
 button {
-	background: none;
-	border: none;
-	padding: 0;
 	cursor: pointer;
+	padding: 0;
+	border: none;
 }
 
 select {
-	appearance: none;
+	cursor: pointer;
+
 	margin: 0;
 	padding: 0;
-	cursor: pointer;
+
+	appearance: none;
 	border: none;
-	background: none;
 	outline: none;
 }

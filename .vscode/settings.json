@@ -1,27 +1,23 @@
 {
-	"search.exclude": {
-		"**/.yarn": true,
-		"**/.pnp.*": true
-	},
-	"typescript.tsdk": ".yarn/sdks/typescript/lib",
-	"typescript.enablePromptUseWorkspaceTsdk": true,
-	"svg.preview.background": "editor",
-	"files.autoSave": "onFocusChange",
-	"editor.defaultFormatter": "biomejs.biome",
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"[css]": {
-		"editor.defaultFormatter": "stylelint.vscode-stylelint"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"editor.codeActionsOnSave": {
-		"quickfix.biome": true,
-		"source.organizeImports.biome": true
-	},
-	"workbench.preferredLightColorTheme": "Quiet Light",
-	"workbench.preferredDarkColorTheme": "Tomorrow Night Blue",
-	"cSpell.words": ["risd"]
+  "svg.preview.background": "editor",
+  "files.autoSave": "onFocusChange",
+  "editor.defaultFormatter": "biomejs.biome",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": true,
+    "source.organizeImports.biome": true
+  },
+  "workbench.preferredLightColorTheme": "Quiet Light",
+  "workbench.preferredDarkColorTheme": "Tomorrow Night Blue",
+  "cSpell.words": [
+    "risd"
+  ]
 }

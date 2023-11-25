@@ -16,7 +16,8 @@
 			"./linter.json",
 			"./package.json",
 			"./.stylelintrc",
-			"./.stylelintignore"
+			"./.stylelintignore",
+			"./.lintstagedrc.json"
 		],
 		"ignoreUnknown": true
 	},

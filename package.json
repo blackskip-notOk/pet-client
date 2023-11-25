@@ -12,9 +12,10 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
-		"format": "yarn dlx @biomejs/biome format src --write",
-		"lint": "yarn dlx @biomejs/biome lint --apply --files-ignore-unknown=true --colors=force --log-level=debug --verbose src",
-		"stylelint": "yarn dlx stylelint --aei --color --fix -f --rdd --risd --rd  \"**/*.css\""
+		"format": "biome format src --write",
+		"lint": "biome lint --apply --files-ignore-unknown=true --colors=force --log-level=info src",
+		"stylelint": "stylelint --aei --color --fix -f --rdd --risd --rd  \"**/*.css\"",
+		"pre-commit-lint": "yarn lint-staged"
 	},
 	"dependencies": {
 		"@hookform/error-message": "^2.0.1",
@@ -47,6 +48,7 @@
 		"browserslist-lint": "^0.3.3",
 		"effector-logger": "^0.14.1",
 		"lightningcss": "^1.22.1",
+		"lint-staged": "^15.1.0",
 		"stylelint": "^15.11.0",
 		"stylelint-config-clean-order": "^5.2.0",
 		"stylelint-config-standard": "^34.0.0",
@@ -64,6 +66,6 @@
 	"packageManager": "yarn@4.0.1",
 	"volta": {
 		"node": "20.9.0",
-		"yarn": "4.0.2"
+		"yarn": "1.22.19"
 	}
 }
