@@ -3,18 +3,37 @@
 	"organizeImports": {
 		"enabled": true
 	},
-	"linter": {
+	"extends": ["./formatter.json", "./linter.json"],
+	"files": {
+		"include": [
+			"./src/**/*.ts",
+			"./src/**/*.tsx",
+			"./configs/vite/proxy.ts",
+			"./vite.config.ts",
+			"./tsconfig.json",
+			"./biome.json",
+			"./formatter.json",
+			"./linter.json",
+			"./package.json",
+			"./.stylelintrc",
+			"./.stylelintignore"
+		],
+		"ignoreUnknown": true
+	},
+	"vcs": {
 		"enabled": true,
-		"rules": {
-			"recommended": true
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"javascript": {
+		"parser": {
+			"unsafeParameterDecoratorsEnabled": true
 		}
 	},
-	"formatter": {
-		"enabled": true,
-		"formatWithErrors": false,
-		"indentStyle": "tab",
-		"indentWidth": 4,
-		"lineWidth": 120,
-		"ignore": []
+	"json": {
+		"parser": {
+			"allowComments": true,
+			"allowTrailingCommas": false
+		}
 	}
 }
