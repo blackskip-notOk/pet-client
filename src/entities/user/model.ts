@@ -1,6 +1,6 @@
-import { z } from 'zod'
+import { z } from "zod";
 
-import i18n from '~i18n'
+import i18n from "~i18n";
 
 export const UserProfileSchema = z
 	.object({
@@ -8,11 +8,13 @@ export const UserProfileSchema = z
 		id: z.string().uuid(),
 		login: z
 			.string({
-				required_error: i18n.t('loginRequired', { ns: 'validation' })
+				required_error: i18n.t("loginRequired", { ns: "validation" }),
 			})
-			.min(3, { message: i18n.t('loginLong', { ns: 'validation', number: 3 }) })
+			.min(3, {
+				message: i18n.t("loginLong", { ns: "validation", number: 3 }),
+			}),
 	})
 	.required()
-	.strict()
+	.strict();
 
-export type TUserProfile = z.infer<typeof UserProfileSchema>
+export type TUserProfile = z.infer<typeof UserProfileSchema>;

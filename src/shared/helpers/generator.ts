@@ -1,8 +1,8 @@
 function* generator(): Generator<number> {
-	let index = 0
+	let index = 0;
 	while (true) {
-		yield index++
+		yield index++;
 	}
 }
 
-export const indexGenerator = generator()
+export const indexGenerator = generator();

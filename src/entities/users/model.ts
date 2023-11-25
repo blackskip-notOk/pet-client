@@ -1,7 +1,7 @@
-import { z } from 'zod'
+import { z } from "zod";
 
-import { UserProfileSchema } from '~entities/user'
+import { UserProfileSchema } from "~entities/user";
 
-export const UsersSchema = z.array(UserProfileSchema)
+export const UsersSchema = z.array(UserProfileSchema);
 
-export type TUsers = z.infer<typeof UsersSchema>
+export type TUsers = z.infer<typeof UsersSchema>;

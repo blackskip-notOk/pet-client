@@ -1,2 +1,2 @@
-export * from './model'
-export { TodoList } from './ui'
+export * from "./model";
+export { TodoList } from "./ui";

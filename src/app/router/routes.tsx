@@ -1,13 +1,13 @@
-import { createBrowserRouter, type RouteObject } from 'react-router-dom'
+import { type RouteObject, createBrowserRouter } from "react-router-dom";
 
-import { LazyExamples } from '~pages/examples'
-import { HomePage } from '~pages/home'
-import { LazyNotFound } from '~pages/notFound'
-import { LazyTodo } from '~pages/todo'
-import { LazyUsers } from '~pages/users'
-import { SuspenseComponent } from '~shared/components'
+import { LazyExamples } from "~pages/examples";
+import { HomePage } from "~pages/home";
+import { LazyNotFound } from "~pages/notFound";
+import { LazyTodo } from "~pages/todo";
+import { LazyUsers } from "~pages/users";
+import { SuspenseComponent } from "~shared/components";
 
-import { paths } from './paths'
+import { paths } from "./paths";
 
 export const routes: Array<RouteObject> = [
 	{
@@ -23,22 +23,22 @@ export const routes: Array<RouteObject> = [
 		// ],
 		element: <HomePage />,
 		errorElement: <SuspenseComponent LazyComponent={LazyNotFound} />,
-		path: paths.root
+		path: paths.root,
 	},
 	{
 		element: <SuspenseComponent LazyComponent={LazyUsers} />,
-		path: paths.users
+		path: paths.users,
 	},
 	{
 		element: <SuspenseComponent LazyComponent={LazyTodo} />,
-		path: paths.todo
+		path: paths.todo,
 	},
 	{
 		children: [],
 		element: <LazyExamples />,
 		errorElement: <SuspenseComponent LazyComponent={LazyNotFound} />,
-		path: paths.examples
-	}
-]
+		path: paths.examples,
+	},
+];
 
-export const router = createBrowserRouter(routes)
+export const router = createBrowserRouter(routes);

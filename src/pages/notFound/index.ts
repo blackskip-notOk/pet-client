@@ -1,3 +1,3 @@
-import { lazy } from 'react'
+import { lazy } from "react";
 
-export const LazyNotFound = lazy(() => import('./NotFound').then(module => ({ default: module.NotFound })))
+export const LazyNotFound = lazy(() => import("./NotFound").then((module) => ({ default: module.NotFound })));

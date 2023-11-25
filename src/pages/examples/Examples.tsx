@@ -1,8 +1,8 @@
-import type { FC } from 'react'
+import type { FC } from "react";
 
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet } from "react-router-dom";
 
-import { paths } from '~router'
+import { paths } from "~router";
 
 export const Examples: FC = () => {
 	return (
@@ -13,5 +13,5 @@ export const Examples: FC = () => {
 				<Outlet />
 			</article>
 		</>
-	)
-}
+	);
+};

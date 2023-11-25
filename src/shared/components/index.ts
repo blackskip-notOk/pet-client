@@ -1,1 +1,1 @@
-export { SuspenseComponent } from './SuspenseComponent'
+export { SuspenseComponent } from "./SuspenseComponent";

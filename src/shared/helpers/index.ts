@@ -1,2 +1,2 @@
-export { indexGenerator } from './generator'
-export * from './typeHelpers'
+export { indexGenerator } from "./generator";
+export * from "./typeHelpers";
