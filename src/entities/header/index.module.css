@@ -99,6 +99,7 @@
 		visibility: hidden;
 		transform: translate(120%);
 		transition: transform 750ms ease-in-out, visibility 800ms;
+		background-color: var(--background-color);
 	}
 
 	.headerMenuActive {

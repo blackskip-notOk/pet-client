@@ -9,6 +9,17 @@
 	"auth": {
 		"welcome": "Привет, {{login}}"
 	},
+	"loginPage": {
+		"title": "Зайди в свой аккаунт",
+		"subTitle": "Или создай новый",
+		"loginLabel": "login",
+		"loginPlaceholder": "your login",
+		"passwordLabel": "password",
+		"passwordPlaceholder": "enter your password",
+		"button": "signup",
+		"userExist": "user with login {{login}} already exist",
+		"serverError": "signup failed with error code {{errorCode}}"
+	},
 	"signup": {
 		"loginLabel": "логин",
 		"loginPlaceholder": "ваш логин",

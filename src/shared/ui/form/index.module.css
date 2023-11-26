@@ -1,0 +1,8 @@
+.form {
+    display: grid;
+    row-gap: 16px;
+    border-radius: 16px;
+    padding: 32px;
+    margin: 32px 0;
+    box-shadow: 0 4px 16px 16px var(--surface-shadow);
+}

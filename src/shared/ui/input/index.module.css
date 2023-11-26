@@ -1,0 +1,8 @@
+.input {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    &:hover {
+        filter: brightness(150%);
+    }
+}

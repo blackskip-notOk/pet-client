@@ -1,0 +1,28 @@
+.page {
+    display: grid;
+    justify-content: center;
+}
+
+.loginSwitchButton {
+    border: none;
+    background: none;
+    text-align: start;
+    filter: brightness(50%);
+    margin-bottom: 16px;
+
+    &:hover {
+        filter: brightness(100%);
+    }
+}
+
+.signupSwitchButton {
+    border: none;
+    background: none;
+    text-align: start;
+    filter: brightness(50%);
+    margin-bottom: 16px;
+
+    &:hover {
+        filter: brightness(100%);
+    }
+}

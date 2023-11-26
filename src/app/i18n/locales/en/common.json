@@ -9,6 +9,17 @@
 	"auth": {
 		"welcome": "Hi, {{login}}"
 	},
+	"loginPage": {
+		"title": "Log in to your account",
+		"subTitle": "Or sign up for an account",
+		"loginLabel": "login",
+		"loginPlaceholder": "your login",
+		"passwordLabel": "password",
+		"passwordPlaceholder": "enter your password",
+		"button": "signup",
+		"userExist": "user with login {{login}} already exist",
+		"serverError": "signup failed with error code {{errorCode}}"
+	},
 	"signup": {
 		"loginLabel": "login",
 		"loginPlaceholder": "your login",

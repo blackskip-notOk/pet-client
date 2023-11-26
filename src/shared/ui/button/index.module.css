@@ -1,0 +1,13 @@
+.button {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    background-color: var(--surface-shadow);
+    font-size: 24px;
+    color: var(--text-alt);
+
+    &:hover {
+        filter: brightness(125%);
+    }
+}

@@ -34,3 +34,14 @@ select {
 	border: none;
 	outline: none;
 }
+
+:is(h1, h2) {
+	margin: 0;
+}
+
+input {
+	background-color: var(--transparent);
+	outline: none;
+	padding: 8px;
+	border: none;
+}
