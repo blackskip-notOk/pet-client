@@ -3,7 +3,8 @@
 		"homeLink": "Изучаем React",
 		"linkAriaLabel": "ссылка на страницу {{path}}",
 		"logoAltText": "глазастая иконка",
-		"iconAltText": "иконка {{path}}"
+		"iconAltText": "иконка {{path}}",
+		"menuButtonAriaLabel": "кнопка бургер меню"
 	},
 	"auth": {
 		"welcome": "Привет, {{login}}"

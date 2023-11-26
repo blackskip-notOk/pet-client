@@ -1,20 +1,12 @@
 {
-	"extends": [
-		"stylelint-config-standard",
-		"stylelint-config-clean-order"
-	],
-	"plugins": [
-		"stylelint-gamut",
-		"stylelint-high-performance-animation"
-	],
+	"extends": ["stylelint-config-standard", "stylelint-config-clean-order"],
+	"plugins": ["stylelint-gamut", "stylelint-high-performance-animation"],
 	"defaultSeverity": "warning",
 	"rules": {
 		"block-no-empty": [
 			true,
 			{
-				"ignore": [
-					"comments"
-				]
+				"ignore": ["comments"]
 			}
 		],
 		"comment-empty-line-before": "always",
@@ -33,17 +25,10 @@
 		"property-no-unknown": [
 			true,
 			{
-				"ignoreProperties": [
-					"font-smooth"
-				]
+				"ignoreProperties": ["font-smooth"]
 			}
 		],
-		"function-disallowed-list": [
-			"rgba",
-			"hsla",
-			"rgb",
-			"hsl"
-		],
+		"function-disallowed-list": ["rgba", "hsla", "rgb", "hsl"],
 		"color-function-notation": "modern",
 		"gamut/color-no-out-gamut-range": true,
 		"plugin/no-low-performance-animation-properties": true,

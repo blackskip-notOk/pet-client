@@ -29,7 +29,7 @@
 	&:focus-visible {
 		filter: hue-rotate(90deg) brightness(0.9);
 		border: none;
-		outline: var(--outline-color) ridge 2px;
+		outline: var(--outline-color) inset 2px;
 		outline-offset: -2px;
 	}
 }

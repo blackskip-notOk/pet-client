@@ -11,3 +11,16 @@
 		font-size: 12px;
 	}
 }
+
+@media screen and (max-width: 600px) {
+	.linkList {
+		flex-direction: column;
+		text-align: end;
+		padding-bottom: 16px;
+
+	}
+
+	.linkList.active {
+		left: 0;
+	}
+}

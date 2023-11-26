@@ -17,7 +17,7 @@
 	},
 	"workbench.preferredLightColorTheme": "Quiet Light",
 	"workbench.preferredDarkColorTheme": "Tomorrow Night Blue",
-	"cSpell.words": ["risd"],
+	"cSpell.words": ["linklist", "risd"],
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"workbench.preferredHighContrastLightColorTheme": "Quiet Light",
 	"workbench.preferredHighContrastColorTheme": "Shades of Purple",

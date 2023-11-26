@@ -3,7 +3,8 @@
 		"homeLink": "Learn React",
 		"linkAriaLabel": "{{path}} page link",
 		"logoAltText": "icon with eyes",
-		"iconAltText": "{{path}} icon"
+		"iconAltText": "{{path}} icon",
+		"menuButtonAriaLabel": "burger menu button"
 	},
 	"auth": {
 		"welcome": "Hi, {{login}}"

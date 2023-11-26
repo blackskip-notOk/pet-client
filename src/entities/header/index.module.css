@@ -1,11 +1,19 @@
 .header {
 	display: grid;
-	grid-template-columns: max-content 1fr max-content;
+	grid-template-columns: max-content 1fr;
 	grid-template-rows: var(--header-height);
 	column-gap: 16px;
 	align-items: center;
-
+	position: fixed;
+	width: 100%;
 	padding: 16px;
+}
+
+.headerMenu {
+	display: grid;
+	grid-template-columns: 1fr max-content;
+	column-gap: 16px;
+	align-items: center;
 }
 
 .navlink {
@@ -14,7 +22,7 @@
 	&:focus-visible {
 		filter: invert(100%);
 		border-radius: 4px;
-		outline: var(--outline-color) ridge 2px;
+		outline: var(--outline-color) inset 2px;
 		outline-offset: 2px;
 	}
 
@@ -44,4 +52,66 @@
 	scale: 1.25;
 	width: var(--header-height);
 	height: var(--header-height);
+}
+
+.hamburger {
+	display: none;
+	width: var(--header-height);
+	height: var(--header-height);
+
+	background-image: url('../../shared/assets/burger.svg');
+	background-size: contain;
+	background-color: oklch(0% 0 0 / 0%);
+	cursor: pointer;
+	justify-self: end;
+	margin-right: 8px;
+
+	&:hover {
+		filter: hue-rotate(-90deg) brightness(0.85);
+	}
+
+	&:focus-visible {
+		filter: brightness(0.85);
+		border: none;
+		border-radius: 30%;
+		outline: var(--outline-color) inset 2px;
+		outline-offset: 2px;
+	}
+}
+
+.bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+	.headerMenu {
+		position: absolute;
+		grid-template-columns: max-content;
+		top: 100%;
+		right: 16px;
+		padding: 16px;
+		border-radius: 16px;
+		box-shadow:  0 6px 16px 16px var(--surface-shadow);
+		visibility: hidden;
+		transform: translate(120%);
+		transition: transform 750ms ease-in-out, visibility 800ms;
+	}
+
+	.headerMenuActive {
+		visibility: visible;
+		transform: translate(0%);
+		transition: transform 750ms ease-in-out;
+	}
+
+	.iconsContainer {
+		text-align: end;
+	}
+
+	.hamburger {
+		display: block;
+	}
 }

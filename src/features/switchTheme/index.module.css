@@ -38,7 +38,7 @@
 	&:focus-visible {
 		filter: brightness(0.85);
 		border: none;
-		outline: var(--outline-color) ridge 2px;
+		outline: var(--outline-color) inset 2px;
 		outline-offset: -2px;
 	}
 }
