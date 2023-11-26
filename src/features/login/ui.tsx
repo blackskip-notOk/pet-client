@@ -1,4 +1,4 @@
-import { type FC, type RefObject, useEffect, useTransition } from "react";
+import { type FC, type RefObject, useEffect } from "react";
 
 import { ErrorMessage } from "@hookform/error-message";
 import { zodResolver } from "@hookform/resolvers/zod";

@@ -4,11 +4,13 @@
 }
 
 .loginSwitchButton {
-    border: none;
-    background: none;
-    text-align: start;
-    filter: brightness(50%);
     margin-bottom: 16px;
+
+    text-align: start;
+
+    background: var(--transparent);
+    filter: brightness(50%);
+    border: none;
 
     &:hover {
         filter: brightness(100%);
@@ -16,11 +18,13 @@
 }
 
 .signupSwitchButton {
-    border: none;
-    background: none;
-    text-align: start;
-    filter: brightness(50%);
     margin-bottom: 16px;
+
+    text-align: start;
+
+    background: var(--transparent);
+    filter: brightness(50%);
+    border: none;
 
     &:hover {
         filter: brightness(100%);

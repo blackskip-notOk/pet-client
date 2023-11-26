@@ -12,11 +12,11 @@
 	}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (width <= 600px) {
 	.linkList {
 		flex-direction: column;
-		text-align: end;
 		padding-bottom: 16px;
+		text-align: end;
 
 	}
 

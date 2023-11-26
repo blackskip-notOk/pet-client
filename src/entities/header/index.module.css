@@ -1,10 +1,12 @@
 .header {
+	position: fixed;
+
 	display: grid;
 	grid-template-columns: max-content 1fr;
 	grid-template-rows: var(--header-height);
 	column-gap: 16px;
 	align-items: center;
-	position: fixed;
+
 	width: 100%;
 	padding: 16px;
 }
@@ -55,16 +57,18 @@
 }
 
 .hamburger {
+	cursor: pointer;
+
 	display: none;
+	justify-self: end;
+
 	width: var(--header-height);
 	height: var(--header-height);
+	margin-right: 8px;
 
+	background-color: var(--transparent);
 	background-image: url('../../shared/assets/burger.svg');
 	background-size: contain;
-	background-color: oklch(0% 0 0 / 0%);
-	cursor: pointer;
-	justify-self: end;
-	margin-right: 8px;
 
 	&:hover {
 		filter: hue-rotate(-90deg) brightness(0.85);
@@ -79,32 +83,33 @@
 	}
 }
 
-.bar {
-	display: block;
-	width: 25px;
-	height: 3px;
-	margin: 5px auto;
-	transition: all 0.3s ease-in-out;
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (width <= 600px) {
 	.headerMenu {
 		position: absolute;
-		grid-template-columns: max-content;
 		top: 100%;
 		right: 16px;
+		transform: translate(120%);
+
+		grid-template-columns: max-content;
+
 		padding: 16px;
+
+		visibility: hidden;
+		background-color: var(--background-color);
 		border-radius: 16px;
 		box-shadow:  0 6px 16px 16px var(--surface-shadow);
-		visibility: hidden;
-		transform: translate(120%);
+
+		/* TODO fix low performance animation  */
+
+		/* will fix it later */
+
+		/* stylelint-disable-next-line plugin/no-low-performance-animation-properties */
 		transition: transform 750ms ease-in-out, visibility 800ms;
-		background-color: var(--background-color);
 	}
 
 	.headerMenuActive {
-		visibility: visible;
 		transform: translate(0%);
+		visibility: visible;
 		transition: transform 750ms ease-in-out;
 	}
 

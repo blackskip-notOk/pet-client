@@ -1,11 +1,13 @@
 .button {
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 16px;
     margin: 16px;
-    background-color: var(--surface-shadow);
+    padding: 16px;
+
     font-size: 24px;
     color: var(--text-alt);
+
+    background-color: var(--surface-shadow);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
 
     &:hover {
         filter: brightness(125%);

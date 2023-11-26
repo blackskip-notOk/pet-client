@@ -1,7 +1,6 @@
 declare const styles: {
-  readonly "page": string;
-  readonly "loginSwitchButton": string;
-  readonly "signupSwitchButton": string;
-};
-export = styles;
-
+	readonly page: string
+	readonly loginSwitchButton: string
+	readonly signupSwitchButton: string
+}
+export = styles

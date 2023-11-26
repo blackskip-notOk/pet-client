@@ -40,8 +40,8 @@ select {
 }
 
 input {
-	background-color: var(--transparent);
-	outline: none;
 	padding: 8px;
+	background-color: var(--transparent);
 	border: none;
+	outline: none;
 }

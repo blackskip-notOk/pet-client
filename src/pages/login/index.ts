@@ -1,5 +1,3 @@
-import { lazy } from "react";
+import { lazy } from 'react'
 
-export const LazyLoginPage = lazy(() =>
-	import("./LoginPage").then((module) => ({ default: module.LoginPage })),
-);
+export const LazyLoginPage = lazy(() => import('./LoginPage').then(module => ({ default: module.LoginPage })))

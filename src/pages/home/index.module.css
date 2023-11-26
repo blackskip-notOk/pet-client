@@ -1,5 +1,5 @@
 .main {
     min-height: 100vh;
-    border: 1px solid aqua;
     padding-top: calc(var(--header-height) + 32px);
+    border: 1px solid aqua;
 }
