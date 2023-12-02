@@ -15,7 +15,7 @@
 		"format": "biome format src --write",
 		"lint": "biome lint --apply --files-ignore-unknown=true --colors=force --log-level=info src",
 		"stylelint": "stylelint --aei --color --fix -f --rdd --risd --rd  \"**/*.css\"",
-		"test": "npx playwright test --debug --ui"
+		"test": "npx playwright test --ui"
 	},
 	"dependencies": {
 		"@hookform/error-message": "^2.0.1",
