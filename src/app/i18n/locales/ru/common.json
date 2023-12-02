@@ -1,4 +1,7 @@
 {
+	"homePage": {
+		"greeting": "Привет {{name}}! Займись чем-нибудь"
+	},
 	"header": {
 		"homeLink": "Изучаем React",
 		"linkAriaLabel": "ссылка на страницу {{path}}",

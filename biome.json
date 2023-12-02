@@ -18,7 +18,9 @@
 			"./.stylelintrc",
 			"./.stylelintignore",
 			"./.lintstagedrc.json",
-			"./.vscode/settings.json"
+			"./.vscode/settings.json",
+			"./playwright.config.ts",
+			"./tests/**/*.ts"
 		],
 		"ignoreUnknown": true
 	},
