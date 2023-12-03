@@ -1,4 +1,4 @@
-{
+module.exports = {
 	"*.ts?(x)": [
 		"biome lint --colors=force --verbose --error-on-warnings --log-level=error src",
 		"biome format src --write"
