@@ -21,5 +21,7 @@
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"workbench.preferredHighContrastLightColorTheme": "Quiet Light",
 	"workbench.preferredHighContrastColorTheme": "Shades of Purple",
-	"workbench.colorTheme": "Quiet Light"
+	"workbench.colorTheme": "Quiet Light",
+	"javascript.preferences.quoteStyle": "single",
+	"typescript.preferences.quoteStyle": "single"
 }
