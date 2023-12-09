@@ -1,6 +1,5 @@
 {
 	"svg.preview.background": "editor",
-	"files.autoSave": "onFocusChange",
 	"editor.defaultFormatter": "biomejs.biome",
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "biomejs.biome"
@@ -12,16 +11,11 @@
 		"editor.defaultFormatter": "biomejs.biome"
 	},
 	"editor.codeActionsOnSave": {
-		"quickfix.biome": true,
-		"source.organizeImports.biome": true
+		"quickfix.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
 	},
-	"workbench.preferredLightColorTheme": "Quiet Light",
-	"workbench.preferredDarkColorTheme": "Tomorrow Night Blue",
 	"cSpell.words": ["linklist", "risd"],
 	"typescript.tsdk": "node_modules/typescript/lib",
-	"workbench.preferredHighContrastLightColorTheme": "Quiet Light",
-	"workbench.preferredHighContrastColorTheme": "Shades of Purple",
-	"workbench.colorTheme": "Quiet Light",
 	"javascript.preferences.quoteStyle": "single",
 	"typescript.preferences.quoteStyle": "single"
 }

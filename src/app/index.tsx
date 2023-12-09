@@ -1,34 +1,49 @@
-import { type FC, Suspense, useEffect } from 'react'
+import { type FC, Suspense, useEffect } from "react";
 
-import { QueryClientProvider } from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { attachLogger } from 'effector-logger'
-import { useEvent } from 'effector-react'
-import { useTranslation } from 'react-i18next'
-import { RouterProvider } from 'react-router-dom'
-import { queryClient } from '~queryClient'
-import { router } from '~router'
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { attachLogger } from "effector-logger";
+import { useEvent } from "effector-react";
+import { useTranslation } from "react-i18next";
+import { RouterProvider } from "react-router-dom";
+import { router } from "~router";
 
-import * as model from './model'
-import './styles/index.css'
+import { authModel } from "~entities/auth";
+import { useAuth } from "~entities/auth/useAuth";
+import * as model from "./model";
+import "./styles/index.css";
 
-attachLogger()
+attachLogger();
 
 export const App: FC = () => {
-	const { t } = useTranslation('glossary')
+	const { t } = useTranslation("glossary");
 
-	const handlePageMounted = useEvent(model.pageMounted)
+	const { data, isSuccess, isError, error } = useAuth();
+
+	const handlePageMounted = useEvent(model.pageMounted);
 
 	useEffect(() => {
-		handlePageMounted()
-	}, [handlePageMounted])
+		if (isError && error) {
+			authModel.authFailedFetched();
+		}
+	}, [isError, error]);
+
+	useEffect(() => {
+		if (isSuccess && data) {
+			authModel.authSuccessFetched(data);
+		}
+	}, [isSuccess, data]);
+
+	useEffect(() => {
+		handlePageMounted();
+	}, [handlePageMounted]);
 
 	return (
-		<Suspense fallback='...Loading'>
-			<QueryClientProvider client={queryClient}>
-				<RouterProvider fallbackElement={<div>{t('loading')}</div>} router={router} />
-				<ReactQueryDevtools initialIsOpen={false} />
-			</QueryClientProvider>
+		<Suspense fallback="...Loading">
+			<RouterProvider
+				fallbackElement={<div>{t("loading")}</div>}
+				router={router}
+			/>
+			<ReactQueryDevtools initialIsOpen={false} />
 		</Suspense>
-	)
-}
+	);
+};
