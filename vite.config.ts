@@ -46,9 +46,8 @@ export default defineConfig(({ mode }) => {
 			typedGenCssModulesPlugin(),
 		],
 		preview: {
-			open: true,
+			host: true,
 			port: 4173,
-			strictPort: true,
 		},
 		resolve: {
 			alias: [
@@ -87,11 +86,13 @@ export default defineConfig(({ mode }) => {
 			],
 		},
 		server: {
-			host: env.CLIENT_HOST ?? "0.0.0.0",
-			open: true,
-			port: Number(env.CLIENT_PORT),
-			proxy: setProxyConfig(mode),
-			strictPort: true,
+			host: true,
+			// host: env.CLIENT_HOST ?? "0.0.0.0",
+			// open: true,
+			// port: Number(env.CLIENT_PORT),
+			port: 8000,
+			// proxy: setProxyConfig(mode),
+			// strictPort: true,
 		},
 	};
 });

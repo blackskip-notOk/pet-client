@@ -1,12 +1,15 @@
-import type { AxiosResponse } from 'axios'
+import type { AxiosResponse } from "axios";
 
-import { api, instance } from '~queryClient'
+import { api, instance } from "~queryClient";
 
-import type { TSignupForm, TSignupResponse } from './model'
+import type { TSignupForm, TSignupResponse } from "./model";
 
-export function signup({ login, password }: TSignupForm): Promise<AxiosResponse<TSignupResponse>> {
-	return instance.post(api.auth.signup, {
+export function signup({
+	login,
+	password,
+}: TSignupForm): Promise<AxiosResponse<TSignupResponse>> {
+	return instance.post(api.auth, {
 		login,
-		password
-	})
+		password,
+	});
 }

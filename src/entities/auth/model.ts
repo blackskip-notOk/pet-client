@@ -2,7 +2,6 @@ import { createEvent, createStore } from "effector";
 import { z } from "zod";
 
 import { UserProfileSchema } from "~entities/user";
-import * as authApi from "./api";
 import { type TAuth } from "./api";
 
 export const AuthResponseSchema = z.object({
