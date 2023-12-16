@@ -9,6 +9,4 @@ export async function getAuth(): Promise<TAuthResponse> {
 	return response.data
 }
 
-export const AUTH_QUERY_KEY = 'auth'
-
 export type TAuth = TAuthResponse | null

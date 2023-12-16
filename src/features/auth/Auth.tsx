@@ -1,11 +1,13 @@
-import { useStore } from 'effector-react'
-import { useTranslation } from 'react-i18next'
-import { authModel } from '~entities/auth'
+import { useUnit } from "effector-react";
+import { useTranslation } from "react-i18next";
+import { authModel } from "~entities/auth";
 
 export const Auth = () => {
-	const { t } = useTranslation('common', { keyPrefix: 'auth' })
+	const { t } = useTranslation("common", { keyPrefix: "auth" });
 
-	const auth = useStore(authModel.$auth)
+	const auth = useUnit(authModel.$auth);
 
-	return <h1>{t('welcome', { login: auth ? auth.user.login : 'stranger' })}</h1>
-}
+	return (
+		<h1>{t("welcome", { login: auth ? auth.user.login : "stranger" })}</h1>
+	);
+};
