@@ -1,14 +1,14 @@
-import { api, instance } from "~queryClient";
-import type { TAuthResponse } from "./model";
+import { api, instance } from '~queryClient'
+import type { TAuthResponse } from './model'
 
 export async function getAuth(): Promise<TAuthResponse> {
 	const response = await instance.get<TAuthResponse>(api.auth, {
-		withCredentials: true,
-	});
+		withCredentials: true
+	})
 
-	return response.data;
+	return response.data
 }
 
-export const AUTH_QUERY_KEY = "auth";
+export const AUTH_QUERY_KEY = 'auth'
 
-export type TAuth = TAuthResponse | null;
+export type TAuth = TAuthResponse | null

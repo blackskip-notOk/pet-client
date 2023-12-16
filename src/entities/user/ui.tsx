@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { FC } from 'react'
 
 export const UserProfile: FC = () => {
 	return (
@@ -6,5 +6,5 @@ export const UserProfile: FC = () => {
 			<div>user</div>
 			<ul />
 		</>
-	);
-};
+	)
+}

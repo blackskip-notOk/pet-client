@@ -1,9 +1,0 @@
-module.exports = {
-	"*.ts?(x)": [
-		"biome lint --colors=force --verbose --error-on-warnings --log-level=error src",
-		"biome format src --write"
-	],
-	"*.css": [
-		"stylelint --aei --color --fix --mw=0 -f --rdd --risd --rd  '**/*.css'"
-	]
-}

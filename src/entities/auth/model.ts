@@ -1,20 +1,20 @@
-import { createEvent, createStore } from "effector";
-import { z } from "zod";
+import { createEvent, createStore } from 'effector'
+import { z } from 'zod'
 
-import { UserProfileSchema } from "~entities/user";
-import { type TAuth } from "./api";
+import { UserProfileSchema } from '~entities/user'
+import { type TAuth } from './api'
 
 export const AuthResponseSchema = z.object({
 	access_token: z.string(),
-	user: UserProfileSchema,
-});
+	user: UserProfileSchema
+})
 
-export type TAuthResponse = z.infer<typeof AuthResponseSchema>;
+export type TAuthResponse = z.infer<typeof AuthResponseSchema>
 
-export const $auth = createStore<TAuth>(null);
+export const $auth = createStore<TAuth>(null)
 
-export const authSuccessFetched = createEvent<TAuthResponse>();
-export const authFailedFetched = createEvent();
+export const authSuccessFetched = createEvent<TAuthResponse>()
+export const authFailedFetched = createEvent()
 
-$auth.on(authSuccessFetched, (_, auth) => auth);
-$auth.on(authFailedFetched, () => null);
+$auth.on(authSuccessFetched, (_, auth) => auth)
+$auth.on(authFailedFetched, () => null)

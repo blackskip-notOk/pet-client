@@ -1,48 +1,48 @@
 {
-    "auth": {
-        "welcome": "Привет, {{login}}"
-    },
-    "createTodo": {
-        "button": "Создать",
-        "content": "Описание:",
-        "contentPlaceholder": "введите описание задачи",
-        "name": "Название:",
-        "namePlaceholder": "введите название задачи",
-        "title": "Новая задача"
-    },
-    "header": {
-        "homeLink": "Изучаем React",
-        "iconAltText": "иконка {{path}}",
-        "linkAriaLabel": "ссылка на страницу {{path}}",
-        "logoAltText": "глазастая иконка",
-        "menuButtonAriaLabel": "кнопка бургер меню"
-    },
-    "loginPage": {
-        "button": "signup",
-        "loginLabel": "login",
-        "loginPlaceholder": "your login",
-        "passwordLabel": "password",
-        "passwordPlaceholder": "enter your password",
-        "serverError": "signup failed with error code {{errorCode}}",
-        "subTitle": "Или создай новый",
-        "title": "Зайди в свой аккаунт",
-        "userExist": "user with login {{login}} already exist"
-    },
-    "navLinks": {
-        "examples": "примеры",
-        "login": "логин",
-        "recoil": "recoil",
-        "signup": "зарегистрироваться",
-        "todo": "задачи",
-        "users": "пользователи"
-    },
-    "signup": {
-        "button": "зарегистрироваться",
-        "loginLabel": "логин",
-        "loginPlaceholder": "ваш логин",
-        "passwordLabel": "пароль",
-        "passwordPlaceholder": "введите ваш пароль",
-        "serverError": "код ошибки регистрации {{errorCode}}",
-        "userExist": "пользователь с логином {{login}} уже зарегистрирован"
-    }
+	"auth": {
+		"welcome": "Привет, {{login}}"
+	},
+	"createTodo": {
+		"button": "Создать",
+		"content": "Описание:",
+		"contentPlaceholder": "введите описание задачи",
+		"name": "Название:",
+		"namePlaceholder": "введите название задачи",
+		"title": "Новая задача"
+	},
+	"header": {
+		"homeLink": "Изучаем React",
+		"iconAltText": "иконка {{path}}",
+		"linkAriaLabel": "ссылка на страницу {{path}}",
+		"logoAltText": "глазастая иконка",
+		"menuButtonAriaLabel": "кнопка бургер меню"
+	},
+	"loginPage": {
+		"button": "signup",
+		"loginLabel": "login",
+		"loginPlaceholder": "your login",
+		"passwordLabel": "password",
+		"passwordPlaceholder": "enter your password",
+		"serverError": "signup failed with error code {{errorCode}}",
+		"subTitle": "Или создай новый",
+		"title": "Зайди в свой аккаунт",
+		"userExist": "user with login {{login}} already exist"
+	},
+	"navLinks": {
+		"examples": "примеры",
+		"login": "логин",
+		"recoil": "recoil",
+		"signup": "зарегистрироваться",
+		"todo": "задачи",
+		"users": "пользователи"
+	},
+	"signup": {
+		"button": "зарегистрироваться",
+		"loginLabel": "логин",
+		"loginPlaceholder": "ваш логин",
+		"passwordLabel": "пароль",
+		"passwordPlaceholder": "введите ваш пароль",
+		"serverError": "код ошибки регистрации {{errorCode}}",
+		"userExist": "пользователь с логином {{login}} уже зарегистрирован"
+	}
 }
