@@ -23,6 +23,7 @@ export const DBExceptionEnum = z.enum([
 	"PrismaClientRustPanicError",
 	"PrismaClientInitializationError",
 	"PrismaClientValidationError",
+	"UnauthorizedException",
 ]);
 
 export type TDBException = z.infer<typeof DBExceptionEnum>;

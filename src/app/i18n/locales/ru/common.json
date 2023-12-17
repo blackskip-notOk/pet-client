@@ -18,20 +18,20 @@
 		"menuButtonAriaLabel": "кнопка бургер меню"
 	},
 	"loginPage": {
-		"button": "signup",
-		"loginLabel": "login",
-		"loginPlaceholder": "your login",
-		"passwordLabel": "password",
-		"passwordPlaceholder": "enter your password",
-		"serverError": "signup failed with error code {{errorCode}}",
+		"button": "залогиниться",
+		"loginLabel": "Логин",
+		"loginPlaceholder": "твой логин",
+		"passwordLabel": "пароль",
+		"passwordPlaceholder": "введи свой пароль",
+		"serverError": "логин упал с кодом {{errorCode}}",
 		"subTitle": "Или создай новый",
 		"title": "Зайди в свой аккаунт",
-		"userExist": "user with login {{login}} already exist"
+		"userExist": "пользователь с логином {{login}} уже есть",
+		"invalidPassword": "неправильный пароль"
 	},
 	"navLinks": {
 		"examples": "примеры",
 		"login": "логин",
-		"recoil": "recoil",
 		"signup": "зарегистрироваться",
 		"todo": "задачи",
 		"users": "пользователи"

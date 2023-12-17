@@ -1,4 +1,4 @@
-import { type FC, useEffect } from "react";
+import { type FC } from "react";
 
 import { useUnit } from "effector-react";
 import { useTranslation } from "react-i18next";
@@ -16,13 +16,7 @@ export const HeaderLogin: FC = () => {
 
 	const auth = useUnit(authModel.$auth);
 
-	const { data, error, isError, isPending, isSuccess, mutate } = useLogout();
-
-	useEffect(() => {
-		if (isSuccess && data) {
-			console.log(data);
-		}
-	}, [isSuccess, data]);
+	const { mutate } = useLogout();
 
 	const handleLogout = () => {
 		mutate();

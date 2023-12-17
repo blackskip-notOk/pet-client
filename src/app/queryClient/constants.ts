@@ -24,3 +24,7 @@ export const httpMethods = {
 	POST: "POST",
 	PUT: "PUT",
 } as const;
+
+export const queryKeys = {
+	auth: 'auth',
+} as const;

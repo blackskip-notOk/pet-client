@@ -16,9 +16,4 @@ export const SignupFormTypeSchema = UserProfileSchema.pick({
 		}),
 });
 
-export const SignupResponseSchema = z.object({
-	access_token: z.string(),
-});
-
 export type SignupFormType = z.infer<typeof SignupFormTypeSchema>;
-export type SignupResponse = z.infer<typeof SignupResponseSchema>;

@@ -1,4 +1,4 @@
-import { type FC, type RefObject, useEffect } from "react";
+import { type FC, type RefObject, useEffect, useState } from "react";
 
 import { ErrorMessage } from "@hookform/error-message";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -12,7 +12,9 @@ import { Input } from "~shared/ui/input";
 import { Label } from "~shared/ui/label";
 
 import { useTranslation } from "react-i18next";
-import { type LoginFormType, LoginFormEnum, LoginFormSchema } from "./model";
+import { isDBError } from "~shared/helpers";
+import { DBExceptionEnum } from "~shared/types";
+import { LoginFormEnum, LoginFormSchema, type LoginFormType } from "./model";
 import { useLogin } from "./useLogin";
 
 interface LoginFormProps {
@@ -22,13 +24,24 @@ interface LoginFormProps {
 export const LoginForm: FC<LoginFormProps> = () => {
 	const { t } = useTranslation("common", { keyPrefix: "loginPage" });
 
+	const [serverError, setServerError] = useState("");
+
 	const { data, error, isError, isPending, isSuccess, mutate } = useLogin();
 
 	useEffect(() => {
-		if (isError) {
-			console.log(error);
+		if (isError && error) {
+			const errorData = error.response?.data;
+			const errorCode = error.response?.status;
+
+			if (isDBError(errorData)) {
+				const message =
+					errorData.cause.name === DBExceptionEnum.enum.UnauthorizedException
+						? t("invalidPassword")
+						: t("serverError", { errorCode });
+				setServerError(message);
+			}
 		}
-	}, [isError, error]);
+	}, [isError, error, t]);
 
 	useEffect(() => {
 		if (isSuccess && data) {
@@ -37,7 +50,8 @@ export const LoginForm: FC<LoginFormProps> = () => {
 	}, [isSuccess, data]);
 
 	const {
-		formState: { errors, isDirty, isSubmitted },
+		control,
+		formState: { errors, isDirty },
 		handleSubmit,
 		register,
 	} = useForm<LoginFormType>({
@@ -53,7 +67,7 @@ export const LoginForm: FC<LoginFormProps> = () => {
 		mutate(data);
 	};
 
-	const isSubmitDisabled = !isDirty || isPending || isSubmitted;
+	const isSubmitDisabled = !isDirty || isPending;
 
 	return (
 		<Form noValidate onSubmit={handleSubmit(onSubmit)}>
@@ -64,7 +78,7 @@ export const LoginForm: FC<LoginFormProps> = () => {
 					aria-invalid={errors[LoginFormEnum.enum.login] ? "true" : "false"}
 					aria-required="true"
 					autoComplete="username"
-					placeholder="your login"
+					placeholder={t("loginPlaceholder")}
 					type="text"
 					{...register(LoginFormEnum.enum.login)}
 				/>
@@ -81,7 +95,7 @@ export const LoginForm: FC<LoginFormProps> = () => {
 					aria-invalid={errors[LoginFormEnum.enum.password] ? "true" : "false"}
 					aria-required="true"
 					autoComplete="current-password"
-					placeholder="enter the password"
+					placeholder={t("passwordPlaceholder")}
 					type="password"
 					{...register(LoginFormEnum.enum.password)}
 				/>
@@ -92,8 +106,9 @@ export const LoginForm: FC<LoginFormProps> = () => {
 				name={LoginFormEnum.enum.password}
 			/>
 			<Button disabled={isSubmitDisabled} type="submit">
-				{t("loginLabel")}
+				{t("button")}
 			</Button>
+			{serverError && <p>{serverError}</p>}
 		</Form>
 	);
 };

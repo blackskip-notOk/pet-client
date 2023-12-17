@@ -1,48 +1,48 @@
 {
-	"auth": {
-		"welcome": "Hi, {{login}}"
-	},
-	"createTodo": {
-		"button": "Create",
-		"content": "Content:",
-		"contentPlaceholder": "enter todo content",
-		"name": "Title:",
-		"namePlaceholder": "enter new todo",
-		"title": "New Todo"
-	},
-	"header": {
-		"homeLink": "Learn React",
-		"iconAltText": "{{path}} icon",
-		"linkAriaLabel": "{{path}} page link",
-		"logoAltText": "icon with eyes",
-		"menuButtonAriaLabel": "burger menu button"
-	},
-	"loginPage": {
-		"button": "signup",
-		"loginLabel": "login",
-		"loginPlaceholder": "your login",
-		"passwordLabel": "password",
-		"passwordPlaceholder": "enter your password",
-		"serverError": "signup failed with error code {{errorCode}}",
-		"subTitle": "Or sign up for an account",
-		"title": "Log in to your account",
-		"userExist": "user with login {{login}} already exist"
-	},
-	"navLinks": {
-		"examples": "examples",
-		"login": "login",
-		"recoil": "recoil",
-		"signup": "signup",
-		"todo": "todo list",
-		"users": "users"
-	},
-	"signup": {
-		"button": "signup",
-		"loginLabel": "login",
-		"loginPlaceholder": "your login",
-		"passwordLabel": "password",
-		"passwordPlaceholder": "enter your password",
-		"serverError": "signup failed with error code {{errorCode}}",
-		"userExist": "user with login {{login}} already exist"
-	}
+    "auth": {
+        "welcome": "Hi, {{login}}"
+    },
+    "createTodo": {
+        "button": "Create",
+        "content": "Content:",
+        "contentPlaceholder": "enter todo content",
+        "name": "Title:",
+        "namePlaceholder": "enter new todo",
+        "title": "New Todo"
+    },
+    "header": {
+        "homeLink": "Learn React",
+        "iconAltText": "{{path}} icon",
+        "linkAriaLabel": "{{path}} page link",
+        "logoAltText": "icon with eyes",
+        "menuButtonAriaLabel": "burger menu button"
+    },
+    "loginPage": {
+        "button": "signup",
+        "invalidPassword": "invalid password",
+        "loginLabel": "login",
+        "loginPlaceholder": "your login",
+        "passwordLabel": "password",
+        "passwordPlaceholder": "enter your password",
+        "serverError": "signup failed with error code {{errorCode}}",
+        "subTitle": "Or sign up for an account",
+        "title": "Log in to your account",
+        "userExist": "user with login {{login}} already exist"
+    },
+    "navLinks": {
+        "examples": "examples",
+        "login": "login",
+        "signup": "signup",
+        "todo": "todo list",
+        "users": "users"
+    },
+    "signup": {
+        "button": "signup",
+        "loginLabel": "login",
+        "loginPlaceholder": "your login",
+        "passwordLabel": "password",
+        "passwordPlaceholder": "enter your password",
+        "serverError": "signup failed with error code {{errorCode}}",
+        "userExist": "user with login {{login}} already exist"
+    }
 }

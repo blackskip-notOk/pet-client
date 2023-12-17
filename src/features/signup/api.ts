@@ -1,12 +1,12 @@
 import { api, instance } from "~queryClient";
 
-import type { SignupFormType, SignupResponse } from "./model";
+import type { SignupFormType } from "./model";
 
 export async function signup({
 	login,
 	password,
-}: SignupFormType): Promise<SignupResponse> {
-	const response = await instance.post<SignupResponse>(api.signup, {
+}: SignupFormType): Promise<void> {
+	const response = await instance.post(api.signup, {
 		login,
 		password,
 	});
