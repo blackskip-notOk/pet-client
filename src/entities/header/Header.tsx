@@ -8,7 +8,7 @@ import { ThemeSwitcher } from "~features/switchTheme";
 import { paths } from "~router";
 import eyes from "~shared/assets/eyes.svg";
 
-import { Auth } from "~features/auth";
+import { AuthGreeting } from "~features/authGreeting";
 import { HeaderLogin } from "~features/headerLogin";
 import {
 	hamburger,
@@ -48,7 +48,7 @@ export const Header: FC = () => {
 					<HeaderLogin />
 				</div>
 			</div>
-			<Auth />
+			<AuthGreeting />
 			<button
 				aria-label={t("menuButtonAriaLabel")}
 				onClick={handleClick}
