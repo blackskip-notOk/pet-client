@@ -10,6 +10,7 @@ export const api = {
 	auth: AUTH,
 	signup: `${AUTH}/signup`,
 	login: `${AUTH}/login`,
+	logout: `${AUTH}/logout`,
 	todo: {
 		create: `${TODO}/${CREATE}`,
 		list: `${TODO}/${LIST}`,

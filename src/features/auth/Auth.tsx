@@ -7,7 +7,5 @@ export const Auth = () => {
 
 	const auth = useUnit(authModel.$auth);
 
-	return (
-		<h1>{t("welcome", { login: auth ? auth.user.login : "stranger" })}</h1>
-	);
+	return <p>{t("welcome", { login: auth ? auth.user.login : "stranger" })}</p>;
 };

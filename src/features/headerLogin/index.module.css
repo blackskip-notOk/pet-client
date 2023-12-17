@@ -1,0 +1,28 @@
+.logoutButton {
+    background-color: transparent;
+    border-radius: 4px;
+    transition: filter 300ms ease-in-out;
+
+    &:focus-visible {
+        filter: invert(100%);
+        outline: var(--outline-color) inset 2px;
+        outline-offset: 2px;
+    }
+
+    &:hover {
+        filter: invert(100%);
+    }
+}
+
+.logoutIcon {
+    scale: 1.25;
+	width: var(--header-height);
+	height: var(--header-height);
+
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	.logoutButton {
+		transition: none;
+	}
+}
