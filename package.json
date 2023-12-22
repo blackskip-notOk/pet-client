@@ -2,7 +2,10 @@
 	"name": "client",
 	"version": "0.0.1",
 	"description": "react 18 client app",
-	"keywords": ["react", "vite"],
+	"keywords": [
+		"react",
+		"vite"
+	],
 	"homepage": "https://client-server-client.vercel.app/",
 	"license": "UNLICENSED",
 	"author": "Ilya Babanov <ilbabanov@gmail.com> (https://github.com/blackskip-notOk)",

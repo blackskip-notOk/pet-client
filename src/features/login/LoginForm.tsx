@@ -50,7 +50,6 @@ export const LoginForm: FC<LoginFormProps> = () => {
 	}, [isSuccess, data]);
 
 	const {
-		control,
 		formState: { errors, isDirty },
 		handleSubmit,
 		register,
