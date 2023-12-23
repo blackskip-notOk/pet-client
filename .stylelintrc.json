@@ -1,0 +1,39 @@
+{
+	"allowEmptyInput": true,
+	"defaultSeverity": "warning",
+	"extends": ["stylelint-config-standard", "stylelint-config-clean-order"],
+	"fix": true,
+	"maxWarnings": true,
+	"plugins": ["stylelint-gamut"],
+	"rules": {
+		"block-no-empty": [
+			true,
+			{
+				"ignore": ["comments"]
+			}
+		],
+		"color-function-notation": "modern",
+		"comment-empty-line-before": "always",
+		"declaration-block-single-line-max-declarations": 1,
+		"declaration-property-value-no-unknown": [
+			true,
+			{
+				"propertiesSyntax": {
+					"background-color": "<oklch>",
+					"color": "<oklch>"
+				}
+			}
+		],
+		"function-disallowed-list": ["rgba", "hsla", "rgb", "hsl"],
+		"gamut/color-no-out-gamut-range": true,
+		"property-no-unknown": [
+			true,
+			{
+				"ignoreProperties": ["font-smooth"]
+			}
+		],
+		"selector-class-pattern": null,
+		"selector-not-notation": "complex",
+		"selector-type-case": "lower"
+	}
+}

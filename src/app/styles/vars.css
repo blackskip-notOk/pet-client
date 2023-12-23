@@ -16,6 +16,7 @@
 	--header-height-xl: 56px;
 	--header-height-md: 44px;
 	--header-height: var(--header-height-xl);
+	--background-attachment: url("/assets/background-dark.jpg");
 
 	color-scheme: light;
 }
