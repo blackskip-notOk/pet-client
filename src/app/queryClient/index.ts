@@ -1,2 +1,2 @@
-export { api, BASE_URL, httpMethods, queryKeys } from './constants.ts'
+export { api, BASE_URL, queryKeys } from './constants.ts'
 export { instance, queryClient } from './queryClient'

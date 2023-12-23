@@ -1,4 +1,4 @@
-import { type FC } from 'react'
+import type { FC } from 'react'
 
 import { useUnit } from 'effector-react'
 import { useTranslation } from 'react-i18next'

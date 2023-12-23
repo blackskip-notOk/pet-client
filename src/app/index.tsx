@@ -9,6 +9,7 @@ import { router } from '~router'
 
 import { authModel } from '~entities/auth'
 import { useAuth } from '~entities/auth/useAuth'
+import './i18n'
 import { pageMounted } from './model'
 import './styles/index.css'
 

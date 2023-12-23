@@ -61,4 +61,5 @@ i18n.use(ChainedBackend)
 		supportedLngs: ['en', 'ru']
 	})
 
+// biome-ignore lint/nursery/noDefaultExport: i18n instance
 export default i18n

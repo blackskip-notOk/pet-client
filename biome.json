@@ -72,12 +72,12 @@
 				"all": true
 			},
 			"style": {
-				"noImplicitBoolean": "warn",
+				"noImplicitBoolean": "off",
 				"noNegationElse": "warn",
 				"useBlockStatements": "warn",
 				"useCollapsedElseIf": "warn",
 				"useFragmentSyntax": "warn",
-				"useNamingConvention": "warn",
+				"useNamingConvention": "off",
 				"useShorthandArrayType": "warn",
 				"useShorthandAssign": "warn"
 			},

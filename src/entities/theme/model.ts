@@ -1,7 +1,7 @@
 import { createEvent, createStore, sample } from 'effector'
 
 import * as themeApi from './api'
-import { type TTheme } from './api'
+import type { TTheme } from './api'
 
 export const $theme = createStore<TTheme>('auto')
 

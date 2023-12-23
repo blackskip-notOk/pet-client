@@ -18,13 +18,6 @@ export const api = {
 	users: USERS
 } as const
 
-export const httpMethods = {
-	DELETE: 'DELETE',
-	GET: 'GET',
-	POST: 'POST',
-	PUT: 'PUT'
-} as const
-
 export const queryKeys = {
 	auth: 'auth'
 } as const

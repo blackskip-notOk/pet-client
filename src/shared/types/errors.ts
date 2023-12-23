@@ -5,7 +5,7 @@ const ErrorWithMessageSchema = z.object({
 	statusText: z.string().optional()
 })
 
-export type TErrorWithMessage = z.infer<typeof ErrorWithMessageSchema>
+export type ErrorWithMessage = z.infer<typeof ErrorWithMessageSchema>
 
 const ServerErrorSchema = z.object({
 	message: z.string(),
@@ -17,7 +17,7 @@ const ServerErrorSchema = z.object({
 
 export type ServerError = z.infer<typeof ServerErrorSchema>
 
-export const DBExceptionEnum = z.enum([
+export const dbExceptionEnum = z.enum([
 	'PrismaClientKnownRequestError',
 	'PrismaClientUnknownRequestError',
 	'PrismaClientRustPanicError',
@@ -26,15 +26,13 @@ export const DBExceptionEnum = z.enum([
 	'UnauthorizedException'
 ])
 
-export type TDBException = z.infer<typeof DBExceptionEnum>
-
-export const DBErrorSchema = ServerErrorSchema.extend({
+export const dbErrorSchema = ServerErrorSchema.extend({
 	cause: z.object({
 		clientVersion: z.string(),
 		code: z.string(),
 		meta: z.object({ target: z.array(z.string()) }),
-		name: DBExceptionEnum
+		name: dbExceptionEnum
 	})
 })
 
-export type TDBError = z.infer<typeof DBErrorSchema>
+export type DbError = z.infer<typeof dbErrorSchema>

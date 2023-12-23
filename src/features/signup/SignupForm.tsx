@@ -6,7 +6,7 @@ import { type SubmitHandler, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 
 import { isDBError } from '~shared/helpers'
-import { DBExceptionEnum } from '~shared/types'
+import { dbExceptionEnum } from '~shared/types'
 import { Button } from '~shared/ui/button'
 import { Form } from '~shared/ui/form'
 import { FormErrorMessage } from '~shared/ui/formErrorMessage'
@@ -30,7 +30,7 @@ export const SignupForm = () => {
 
 			if (isDBError(errorData)) {
 				const message =
-					errorData.cause.name === DBExceptionEnum.enum.PrismaClientKnownRequestError
+					errorData.cause.name === dbExceptionEnum.enum.PrismaClientKnownRequestError
 						? t('userExist', { login: variables?.login })
 						: t('serverError', { errorCode })
 				setServerError(message)

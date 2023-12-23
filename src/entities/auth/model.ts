@@ -2,7 +2,7 @@ import { createEvent, createStore } from 'effector'
 import { z } from 'zod'
 
 import { UserProfileSchema } from '~entities/user'
-import { type TAuth } from './api'
+import type { TAuth } from './api'
 
 export const AuthResponseSchema = z.object({
 	access_token: z.string(),

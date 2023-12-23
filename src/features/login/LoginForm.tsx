@@ -13,7 +13,7 @@ import { Label } from '~shared/ui/label'
 
 import { useTranslation } from 'react-i18next'
 import { isDBError } from '~shared/helpers'
-import { DBExceptionEnum } from '~shared/types'
+import { dbExceptionEnum } from '~shared/types'
 import { LoginFormEnum, LoginFormSchema, type LoginFormType } from './model'
 import { useLogin } from './useLogin'
 
@@ -35,7 +35,7 @@ export const LoginForm: FC<LoginFormProps> = () => {
 
 			if (isDBError(errorData)) {
 				const message =
-					errorData.cause.name === DBExceptionEnum.enum.UnauthorizedException
+					errorData.cause.name === dbExceptionEnum.enum.UnauthorizedException
 						? t('invalidPassword')
 						: t('serverError', { errorCode })
 				setServerError(message)
@@ -45,7 +45,7 @@ export const LoginForm: FC<LoginFormProps> = () => {
 
 	useEffect(() => {
 		if (isSuccess && data) {
-			console.log(data)
+			// console.log(data)
 		}
 	}, [isSuccess, data])
 
@@ -62,7 +62,6 @@ export const LoginForm: FC<LoginFormProps> = () => {
 	})
 
 	const onSubmit: SubmitHandler<LoginFormType> = data => {
-		console.log(data)
 		mutate(data)
 	}
 

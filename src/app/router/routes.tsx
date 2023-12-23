@@ -10,7 +10,7 @@ import { SuspenseComponent } from '~shared/components'
 import { LazyLoginPage } from '~pages/login'
 import { paths } from './paths'
 
-export const routes: Array<RouteObject> = [
+export const routes: RouteObject[] = [
 	{
 		children: [
 			{

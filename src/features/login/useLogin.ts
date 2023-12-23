@@ -3,7 +3,7 @@ import type { AxiosError } from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { queryClient, queryKeys } from '~queryClient'
 import { paths } from '~router'
-import { type ServerError } from '~shared/types'
+import type { ServerError } from '~shared/types'
 import { login } from './api'
 import type { LoginFormType } from './model'
 
