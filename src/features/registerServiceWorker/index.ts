@@ -1,1 +1,1 @@
-export * as serviceWorkerApi from "./api.ts";
+export * as serviceWorkerApi from './api.ts'
