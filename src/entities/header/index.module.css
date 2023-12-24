@@ -1,5 +1,6 @@
 .header {
 	position: fixed;
+	z-index: 1;
 
 	display: grid;
 	grid-template-columns: max-content 1fr;
@@ -119,7 +120,7 @@
 
 	.hamburger {
 		display: block;
-		grid-row: 1;
 		grid-column: 2;
+		grid-row: 1;
 	}
 }

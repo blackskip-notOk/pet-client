@@ -1,16 +1,79 @@
-.main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.wrapper {
+    overflow: hidden auto;
 
-    min-height: 100vh;
+    height: 100vh;
     padding-top: calc(var(--header-height) + 32px);
     padding-right: 16px;
     padding-left: 16px;
 
-    background-image: var(--background-attachment);
+    perspective: 10px;
+
+    scroll-timeline-name: --parallaxtimeline;
+}
+
+.parallaxContainer {
+    position: relative;
+    z-index: -1;
+    transform-style: preserve-3d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+}
+
+.parallaxLayer {
+    position: absolute;
+    z-index: -1;
+
+    object-fit: cover;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
+
+.sky {
+    transform: translateZ(-10px) scale(2.2);
+    width: 100%;
+    height: 100%;
+    background-image: var(--background-sky);
+}
+
+.skyBall {
+    top: -25%;
+
+    width: 200px;
+    height: 200px;
+
+    background-image: var(--background-sky-ball);
+
+    animation-name: rotate-animation;
+    animation-direction: alternate;
+
+    animation-timeline: --parallaxtimeline;
+}
+
+.peak {
+    transform: translateZ(-5px) scale(1.8) translateY(5%);
+    width: 100%;
+    height: 100%;
+    background-image: var(--background-peak);
+}
+
+.mountains {
+    transform: translateZ(0) scale(1.3) translateY(35%) translateX(-2%);
+    width: 100%;
+    height: 100%;
+    background-image: var(--background-mountains);
+}
+
+@keyframes rotate-animation {
+    from {
+        transform: translateZ(-10px) scale(2) rotate(0.5turn) ;
+    }
+
+    to {
+        transform: translateZ(-10px) scale(2) rotate(1turn);
+    }
+  }

@@ -16,7 +16,10 @@
 	--header-height-xl: 56px;
 	--header-height-md: 44px;
 	--header-height: var(--header-height-xl);
-	--background-attachment: url("/assets/background-dark.jpg");
+	--background-sky: url('/public/assets/stars.svg');
+	--background-sky-ball: url('/public/assets/moon.svg');
+	--background-peak: url('/public/assets/peak.svg');
+	--background-mountains: url('/public/assets/mountains.svg');
 
 	color-scheme: light;
 }
