@@ -4,7 +4,7 @@ declare const styles: {
   readonly "parallaxLayer": string;
   readonly "sky": string;
   readonly "skyBall": string;
-  readonly "rotateAnimation": string;
+  readonly "skyBall": string;
   readonly "peak": string;
   readonly "mountains": string;
 };
