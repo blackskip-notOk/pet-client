@@ -16,10 +16,10 @@
 	--header-height-xl: 56px;
 	--header-height-md: 44px;
 	--header-height: var(--header-height-xl);
-	--background-sky: url('/public/assets/stars.svg');
-	--background-sky-ball: url('/public/assets/moon.svg');
-	--background-peak: url('/public/assets/peak.svg');
-	--background-mountains: url('/public/assets/mountains.svg');
+	--background-sky: url('/src/shared/assets/sky.svg');
+	--background-sky-ball: url('/src/shared/assets/sun.svg');
+	--background-peak: url('/src/shared/assets/peak.svg');
+	--background-mountains: url('/src/shared/assets/mountains.svg');
 
 	color-scheme: light;
 }
@@ -30,6 +30,10 @@
 		--text-alt: oklch(95.84% 0.038 85.35deg);
 		--text-alt-hover: color-mix(in oklch, var(--text-alt) 100%, var(--transparent) 25%);
 		--outline-color: oklch(53.78% 0.17 39.15deg);
+		--background-sky: url('/src/shared/assets/stars.svg');
+		--background-sky-ball: url('/src/shared/assets/moon.svg');
+		--background-peak: url('/src/shared/assets/peak.svg');
+	--background-mountains: url('/src/shared/assets/mountains.svg');
 
 		color-scheme: dark;
 	}
@@ -40,6 +44,10 @@
 	--text-alt: oklch(32.76% 0.068 257.27deg);
 	--text-alt-hover: oklch(48.08% 0.114 301.77deg);
 	--outline-color: oklch(53.78% 0.17 39.15deg);
+	--background-sky: url('/src/shared/assets/sky.svg');
+	--background-sky-ball: url('/src/shared/assets/sun.svg');
+	--background-peak: url('/src/shared/assets/peak.svg');
+	--background-mountains: url('/src/shared/assets/mountains.svg');
 
 	color-scheme: light;
 }
@@ -49,6 +57,10 @@
 	--text-alt: oklch(95.84% 0.038 85.35deg);
 	--text-alt-hover: color-mix(in oklch, var(--text-alt) 100%, var(--transparent) 25%);
 	--outline-color: oklch(81.71% 0.103 295.35deg);
+	--background-sky: url('/src/shared/assets/stars.svg');
+		--background-sky-ball: url('/src/shared/assets/moon.svg');
+	--background-peak: url('/src/shared/assets/peak.svg');
+	--background-mountains: url('/src/shared/assets/mountains.svg');
 
 	color-scheme: dark;
 }
